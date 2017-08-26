@@ -1,0 +1,4017 @@
+<html lang="en" dir="ltr" class="client-nojs">
+ <head>
+  <meta charset="UTF-8">
+  <title>
+   Go (programming language) - Wikipedia, the free encyclopedia
+  </title>
+  <meta name="generator" content="MediaWiki 1.25wmf6">
+  <link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Go_(programming_language)">
+  <link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Go_(programming_language)&amp;action=edit">
+  <link rel="edit" title="Edit this page" href="/w/index.php?title=Go_(programming_language)&amp;action=edit">
+  <link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/wikipedia.png">
+  <link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikipedia.ico">
+  <link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)">
+  <link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+  <link rel="alternate" hreflang="x-default" href="/wiki/Go_(programming_language)">
+  <link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/">
+  <link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+  <link rel="canonical" href="http://en.wikipedia.org/wiki/Go_(programming_language)">
+  <link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cfeatured-articles-links%2CrefToolbar%2Cteahouse%7Cext.geshi.language.go%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%2CwikimediaBadges%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector&amp;*">
+  <meta name="ResourceLoaderDynamicStyles" content="">
+  <link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*">
+  <style>
+   a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */
+  </style>
+  <script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*">
+  </script>
+  <script>
+   if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Go_(programming_language)","wgTitle":"Go (programming language)","wgCurRevisionId":632918619,"wgRevisionId":632918619,"wgArticleId":25039021,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages with citations lacking titles","Pages with citations having bare URLs","CS1 errors: missing author or editor","All articles with unsourced statements","Articles with unsourced statements from July 2014","Articles containing potentially dated statements from August 2014","All articles containing potentially dated statements","Articles prone to spam from June 2013","Use dmy dates from August 2011","C programming language family","Concurrent programming languages","Google software","Procedural programming languages","Cross-platform software","Programming languages created in 2009","American inventions","Software using the BSD license","Free compilers and interpreters"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Go_(programming_language)","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"preview":false,"previewDialog":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"isPageWatched":false,"pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":4096,"namespacesWithSubpages":{"6":0,"8":0,"1":true,"2":true,"3":true,"4":true,"5":true,"7":true,"9":true,"10":true,"11":true,"12":true,"13":true,"14":true,"15":true,"100":true,"101":true,"102":true,"103":true,"104":true,"105":true,"106":true,"107":true,"108":true,"109":true,"110":true,"111":true,"830":true,"831":true,"447":true,"2600":false,"828":true,"829":true}},"wikilove-recipient":"","wikilove-anon":0,"wgHHVMStart":1412726400000,"wgULSAcceptLanguageList":["en-gb","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q37227"});
+}
+  </script>
+  <script>
+   if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"watchrollback":0,
+"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"visualeditor-enable":0,"visualeditor-betatempdisable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-language":0,"visualeditor-hidebetawelcome":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-user-rights":true,"echo-subscriptions-web-user-rights":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,
+"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","multimediaviewer-enable":true,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":
+false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"searchNs2600":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-geonotice":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-refToolbar":1,"gadget-mySandbox":1,"gadget-featured-articles-links":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:fb6d33a792758dc6c0c50bd882524047 */
+}
+  </script>
+  <script>
+   if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}
+  </script>
+  <link rel="dns-prefetch" href="//meta.wikimedia.org">
+  <!--[if lt IE 7]&gt;&lt;style type=&#34;text/css&#34;&gt;body{behavior:url(&#34;/w/static-1.25wmf6/skins/Vector/csshover.min.htc&#34;)}&lt;/style&gt;&lt;![endif]-->
+ </head>
+ <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Go_programming_language skin-vector action-view vector-animateLayout">
+  <div id="mw-page-base" class="noprint">
+  </div>
+  <div id="mw-head-base" class="noprint">
+  </div>
+  <div id="content" class="mw-body" role="main">
+   <a id="top">
+   </a>
+   <div id="siteNotice">
+    <!-- CentralNotice -->
+   </div>
+   <div class="mw-indicators">
+   </div>
+   <h1 id="firstHeading" class="firstHeading" lang="en">
+    <span dir="auto">
+     Go (programming language)
+    </span>
+   </h1>
+   <div id="bodyContent" class="mw-body-content">
+    <div id="siteSub">
+     From Wikipedia, the free encyclopedia
+    </div>
+    <div id="contentSub">
+    </div>
+    <div id="jump-to-nav" class="mw-jump">
+     Jump to:
+     <a href="#mw-navigation">
+      navigation
+     </a>
+     ,
+     <a href="#p-search">
+      search
+     </a>
+    </div>
+    <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+     <div class="hatnote">
+      Not to be confused with
+      <a href="/wiki/Go!_(programming_language)" title="Go! (programming language)">
+       Go! (programming language)
+      </a>
+      , an agent-based language released in 2003.
+     </div>
+     <table class="infobox vevent" style="border-spacing:3px;width:22em">
+      <caption class="summary">
+       Go
+      </caption>
+      <tbody>
+       <tr>
+        <td colspan="2" style="text-align:center">
+         <a href="/wiki/File:Golang.png" class="image">
+          <img alt="Golang.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/300px-Golang.png" width="300" height="108" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/450px-Golang.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/600px-Golang.png 2x" data-file-width="1224" data-file-height="440">
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         <a href="/wiki/Programming_paradigm" title="Programming paradigm">
+          Paradigm(s)
+         </a>
+        </th>
+        <td>
+         <a href="/wiki/Compiled_language" title="Compiled language">
+          compiled
+         </a>
+         ,
+         <a href="/wiki/Concurrent_programming" title="Concurrent programming" class="mw-redirect">
+          concurrent
+         </a>
+         ,
+         <a href="/wiki/Imperative_programming" title="Imperative programming">
+          imperative
+         </a>
+         ,
+         <a href="/wiki/Structured_programming" title="Structured programming">
+          structured
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         <a href="/wiki/Software_design" title="Software design">
+          Designed by
+         </a>
+        </th>
+        <td>
+         <a href="/wiki/Robert_Griesemer" title="Robert Griesemer">
+          Robert Griesemer
+         </a>
+         <br>
+         <a href="/wiki/Rob_Pike" title="Rob Pike">
+          Rob Pike
+         </a>
+         <br>
+         <a href="/wiki/Ken_Thompson" title="Ken Thompson">
+          Ken Thompson
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         <a href="/wiki/Software_developer" title="Software developer">
+          Developer
+         </a>
+        </th>
+        <td class="organiser">
+         <a href="/wiki/Google" title="Google">
+          Google Inc.
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         Appeared in
+        </th>
+        <td>
+         2009
+         <span class="noprint">
+          ; 5 years ago
+         </span>
+         <span style="display:none">
+          (
+          <span class="bday dtstart published updated">
+           2009
+          </span>
+          )
+         </span>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         <a href="/wiki/Software_release_life_cycle" title="Software release life cycle">
+          Stable release
+         </a>
+        </th>
+        <td>
+         version 1.3.3
+         <sup id="cite_ref-1" class="reference">
+          <a href="#cite_note-1">
+           <span>
+            [
+           </span>
+           1
+           <span>
+            ]
+           </span>
+          </a>
+         </sup>
+         / 1 October 2014
+         <span class="noprint">
+          ; 39 days ago
+         </span>
+         <span style="display:none">
+          (
+          <span class="bday dtstart published updated">
+           2014-10-01
+          </span>
+          )
+         </span>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         <a href="/wiki/Type_system" title="Type system">
+          Typing discipline
+         </a>
+        </th>
+        <td>
+         <a href="/wiki/Strong_typing" title="Strong typing" class="mw-redirect">
+          strong
+         </a>
+         ,
+         <a href="/wiki/Static_typing" title="Static typing" class="mw-redirect">
+          static
+         </a>
+         ,
+         <a href="/wiki/Type_inference" title="Type inference">
+          inferred
+         </a>
+         ,
+         <a href="/wiki/Nominal_typing" title="Nominal typing" class="mw-redirect">
+          nominal
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         <a href="/wiki/Programming_language_implementation" title="Programming language implementation">
+          Major implementations
+         </a>
+        </th>
+        <td>
+         gc (8g, 6g, 5g), gccgo
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         Influenced by
+        </th>
+        <td>
+         <a href="/wiki/C_(programming_language)" title="C (programming language)">
+          C
+         </a>
+         ,
+         <a href="/wiki/Occam_(programming_language)" title="Occam (programming language)">
+          occam
+         </a>
+         ,
+         <a href="/wiki/Limbo_(programming_language)" title="Limbo (programming language)">
+          Limbo
+         </a>
+         ,
+         <a href="/wiki/Modula" title="Modula">
+          Modula
+         </a>
+         ,
+         <a href="/wiki/Newsqueak" title="Newsqueak">
+          Newsqueak
+         </a>
+         ,
+         <a href="/wiki/Oberon_(programming_language)" title="Oberon (programming language)">
+          Oberon
+         </a>
+         ,
+         <a href="/wiki/Pascal_(programming_language)" title="Pascal (programming language)">
+          Pascal
+         </a>
+         ,
+         <sup id="cite_ref-langfaq_2-0" class="reference">
+          <a href="#cite_note-langfaq-2">
+           <span>
+            [
+           </span>
+           2
+           <span>
+            ]
+           </span>
+          </a>
+         </sup>
+         <a href="/wiki/Python_(programming_language)" title="Python (programming language)">
+          Python
+         </a>
+         <sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">
+          [
+          <i>
+           <a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">
+            <span title="This claim needs references to reliable sources. (July 2014)">
+             citation needed
+            </span>
+           </a>
+          </i>
+          ]
+         </sup>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         Implementation language
+        </th>
+        <td>
+         <a href="/wiki/C_(programming_language)" title="C (programming language)">
+          C
+         </a>
+         , Go,
+         <a href="/wiki/Assembly_language" title="Assembly language">
+          Asm
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         <a href="/wiki/Operating_system" title="Operating system">
+          OS
+         </a>
+        </th>
+        <td>
+         <a href="/wiki/Linux" title="Linux">
+          Linux
+         </a>
+         ,
+         <a href="/wiki/Mac_OS_X" title="Mac OS X" class="mw-redirect">
+          Mac OS X
+         </a>
+         ,
+         <a href="/wiki/FreeBSD" title="FreeBSD">
+          FreeBSD
+         </a>
+         ,
+         <a href="/wiki/NetBSD" title="NetBSD">
+          NetBSD
+         </a>
+         ,
+         <a href="/wiki/OpenBSD" title="OpenBSD">
+          OpenBSD
+         </a>
+         ,
+         <a href="/wiki/Microsoft_Windows" title="Microsoft Windows">
+          MS Windows
+         </a>
+         ,
+         <a href="/wiki/Plan_9_from_Bell_Labs" title="Plan 9 from Bell Labs">
+          Plan 9
+         </a>
+         <sup id="cite_ref-3" class="reference">
+          <a href="#cite_note-3">
+           <span>
+            [
+           </span>
+           3
+           <span>
+            ]
+           </span>
+          </a>
+         </sup>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         <a href="/wiki/Software_license" title="Software license">
+          License
+         </a>
+        </th>
+        <td>
+         <a href="/wiki/BSD_licenses" title="BSD licenses">
+          BSD
+         </a>
+         -style
+         <sup id="cite_ref-4" class="reference">
+          <a href="#cite_note-4">
+           <span>
+            [
+           </span>
+           4
+           <span>
+            ]
+           </span>
+          </a>
+         </sup>
+         + Patent grant
+         <sup id="cite_ref-5" class="reference">
+          <a href="#cite_note-5">
+           <span>
+            [
+           </span>
+           5
+           <span>
+            ]
+           </span>
+          </a>
+         </sup>
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         <a href="/wiki/Filename_extension" title="Filename extension">
+          Filename extension(s)
+         </a>
+        </th>
+        <td>
+         .go
+        </td>
+       </tr>
+       <tr>
+        <th scope="row" style="text-align:left">
+         Website
+        </th>
+        <td>
+         <span class="url">
+          <a rel="nofollow" class="external text" href="https://golang.org">
+           golang.org
+          </a>
+         </span>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p>
+      <b>
+       Go
+      </b>
+      , also commonly referred to as
+      <b>
+       golang
+      </b>
+      , is a programming language initially developed at
+      <a href="/wiki/Google" title="Google">
+       Google
+      </a>
+      <sup id="cite_ref-6" class="reference">
+       <a href="#cite_note-6">
+        <span>
+         [
+        </span>
+        6
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      in 2007 by
+      <a href="/wiki/Robert_Griesemer" title="Robert Griesemer">
+       Robert Griesemer
+      </a>
+      ,
+      <a href="/wiki/Rob_Pike" title="Rob Pike">
+       Rob Pike
+      </a>
+      , and
+      <a href="/wiki/Ken_Thompson" title="Ken Thompson">
+       Ken Thompson
+      </a>
+      .
+      <sup id="cite_ref-langfaq_2-1" class="reference">
+       <a href="#cite_note-langfaq-2">
+        <span>
+         [
+        </span>
+        2
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      It is a statically-
+      <a href="/wiki/Type_system" title="Type system">
+       typed
+      </a>
+      language with syntax loosely derived from that of C, adding
+      <a href="/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">
+       garbage collection
+      </a>
+      ,
+      <a href="/wiki/Type_safety" title="Type safety">
+       type safety
+      </a>
+      , some
+      <a href="/wiki/Dynamic_typing" title="Dynamic typing" class="mw-redirect">
+       dynamic-typing
+      </a>
+      capabilities, additional built-in types such as
+      <a href="/wiki/Variable-length_array" title="Variable-length array">
+       variable-length arrays
+      </a>
+      and key-value maps, and a large standard library.
+     </p>
+     <p>
+      The language was announced in November 2009 and is now used in some of Google&#39;s production systems.
+      <sup id="cite_ref-faq_7-0" class="reference">
+       <a href="#cite_note-faq-7">
+        <span>
+         [
+        </span>
+        7
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Go&#39;s &#34;gc&#34; compiler targets the
+      <a href="/wiki/Linux" title="Linux">
+       Linux
+      </a>
+      ,
+      <a href="/wiki/Mac_OS_X" title="Mac OS X" class="mw-redirect">
+       Mac OS X
+      </a>
+      ,
+      <a href="/wiki/FreeBSD" title="FreeBSD">
+       FreeBSD
+      </a>
+      ,
+      <a href="/wiki/NetBSD" title="NetBSD">
+       NetBSD
+      </a>
+      ,
+      <a href="/wiki/OpenBSD" title="OpenBSD">
+       OpenBSD
+      </a>
+      ,
+      <a href="/wiki/Plan_9_from_Bell_Labs" title="Plan 9 from Bell Labs">
+       Plan 9
+      </a>
+      , and
+      <a href="/wiki/Microsoft_Windows" title="Microsoft Windows">
+       Microsoft Windows
+      </a>
+      operating systems and the
+      <a href="/wiki/I386" title="I386" class="mw-redirect">
+       i386
+      </a>
+      ,
+      <a href="/wiki/Amd64" title="Amd64" class="mw-redirect">
+       amd64
+      </a>
+      , and
+      <a href="/wiki/ARM_architecture" title="ARM architecture">
+       ARM
+      </a>
+      processor architectures.
+      <sup id="cite_ref-8" class="reference">
+       <a href="#cite_note-8">
+        <span>
+         [
+        </span>
+        8
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      A second compiler, gccgo, is a
+      <a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">
+       GCC
+      </a>
+      frontend.
+      <sup id="cite_ref-9" class="reference">
+       <a href="#cite_note-9">
+        <span>
+         [
+        </span>
+        9
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      <sup id="cite_ref-10" class="reference">
+       <a href="#cite_note-10">
+        <span>
+         [
+        </span>
+        10
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <p>
+     </p>
+     <div id="toc" class="toc">
+      <div id="toctitle">
+       <h2>
+        Contents
+       </h2>
+      </div>
+      <ul>
+      </ul>
+     </div>
+     <p>
+     </p>
+     <h2>
+      <span class="mw-headline" id="History">
+       History
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=1" title="Edit section: History">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <p>
+      Ken Thompson states that, initially, Go was purely an experimental project. Referring to himself along with the other original authors of Go, he states:
+      <sup id="cite_ref-11" class="reference">
+       <a href="#cite_note-11">
+        <span>
+         [
+        </span>
+        11
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <blockquote class="templatequote">
+      <p>
+       When the three of us [Thompson, Rob Pike, and Robert Griesemer] got started, it was pure research. The three of us got together and decided that we hated
+       <a href="/wiki/C%2B%2B" title="C++">
+        C++
+       </a>
+       . [laughter] ... [Returning to Go,] we started off with the idea that all three of us had to be talked into every feature in the language, so there was no extraneous garbage put into the language for any reason.
+      </p>
+     </blockquote>
+     <p>
+      The history of the language before its first release, back to 2007, is covered in the language&#39;s FAQ.
+      <sup id="cite_ref-12" class="reference">
+       <a href="#cite_note-12">
+        <span>
+         [
+        </span>
+        12
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <h2>
+      <span class="mw-headline" id="Language_design">
+       Language design
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=2" title="Edit section: Language design">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <p>
+      Go is recognizably in the tradition of C, but makes many changes aimed at conciseness, simplicity, and safety. The following is a brief overview of the features which define Go (for more information see the
+      <a rel="nofollow" class="external text" href="http://golang.org/ref/spec">
+       language specification
+      </a>
+      ):
+     </p>
+     <ul>
+     </ul>
+     <h3>
+      <span class="mw-headline" id="Syntax">
+       Syntax
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=3" title="Edit section: Syntax">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h3>
+     <p>
+      Go&#39;s syntax includes changes from C aimed at keeping code concise and readable. The programmer needn&#39;t specify the types of expressions, allowing just
+      <code>
+       i := 3
+      </code>
+      or
+      <code>
+       s := &#34;some words&#34;
+      </code>
+      to replace C&#39;s
+      <code>
+       int i = 3;
+      </code>
+      or
+      <code>
+       char* s = &#34;some words&#34;;
+      </code>
+      . Semicolons at the end of lines aren&#39;t required. Functions may return multiple, named values, and returning a
+      <code>
+       result, err
+      </code>
+      pair is the conventional way a function indicates an error to its caller in Go.
+      <sup id="cite_ref-19" class="reference">
+       <a href="#cite_note-19">
+        <span>
+         [
+        </span>
+        a
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Go adds literal syntaxes for initializing struct parameters by name, and for initializing maps and slices. As an alternative to C&#39;s three-statement
+      <code>
+       for
+      </code>
+      loop, Go&#39;s
+      <code>
+       range
+      </code>
+      expressions allow concise iteration over arrays, slices, strings, and maps.
+     </p>
+     <h3>
+      <span class="mw-headline" id="Types">
+       Types
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=4" title="Edit section: Types">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h3>
+     <p>
+      Go adds some basic types not present in C for safety and convenience:
+     </p>
+     <ul>
+     </ul>
+     <p>
+      Structurally, Go&#39;s type system has a few differences from C and most C derivatives. Unlike C
+      <code>
+       typedef
+      </code>
+      s, Go&#39;s named
+      <code>
+       type
+      </code>
+      s are not aliases for each other, and rules limit when different types can be assigned to each other without explicit conversion.
+      <sup id="cite_ref-20" class="reference">
+       <a href="#cite_note-20">
+        <span>
+         [
+        </span>
+        19
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Unlike in C, conversions between number types are explicit; to ensure that doesn&#39;t create verbose conversion-heavy code, numeric constants in Go represent abstract, untyped numbers.
+      <sup id="cite_ref-21" class="reference">
+       <a href="#cite_note-21">
+        <span>
+         [
+        </span>
+        20
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Finally, in place of non-virtual inheritance, Go has a feature called
+      <i>
+       type embedding
+      </i>
+      in which one object can contain others and pick up their methods.
+     </p>
+     <h3>
+      <span class="mw-headline" id="Package_system">
+       Package system
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=5" title="Edit section: Package system">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h3>
+     <p>
+      In Go&#39;s package system, each package has a path (e.g.,
+      <code>
+       &#34;compress/bzip2&#34;
+      </code>
+      or
+      <code>
+       &#34;code.google.com/p/go.net/html&#34;
+      </code>
+      ) and a name (e.g.,
+      <code>
+       bzip2
+      </code>
+      or
+      <code>
+       html
+      </code>
+      ). References to other packages&#39; definitions must
+      <i>
+       always
+      </i>
+      be prefixed with the other package&#39;s name, and only the
+      <i>
+       capitalized
+      </i>
+      names from other modules are accessible:
+      <code>
+       io.Reader
+      </code>
+      is public but
+      <code>
+       bzip2.reader
+      </code>
+      is not.
+      <sup id="cite_ref-22" class="reference">
+       <a href="#cite_note-22">
+        <span>
+         [
+        </span>
+        21
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      The
+      <code>
+       go get
+      </code>
+      command can retrieve packages stored in a remote repository such as Github or Google Code, and package paths often look like partial URLs for compatibility.
+      <sup id="cite_ref-23" class="reference">
+       <a href="#cite_note-23">
+        <span>
+         [
+        </span>
+        22
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <h3>
+      <span class="mw-headline" id="Concurrency:_goroutines.2C_channels.2C_and_select">
+       Concurrency: goroutines, channels, and
+       <code>
+        select
+       </code>
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=6" title="Edit section: Concurrency: goroutines, channels, and select">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h3>
+     <p>
+      Go provides facilities for writing concurrent programs that share state by communicating.
+      <sup id="cite_ref-24" class="reference">
+       <a href="#cite_note-24">
+        <span>
+         [
+        </span>
+        23
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      <sup id="cite_ref-25" class="reference">
+       <a href="#cite_note-25">
+        <span>
+         [
+        </span>
+        24
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      <sup id="cite_ref-26" class="reference">
+       <a href="#cite_note-26">
+        <span>
+         [
+        </span>
+        25
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Concurrency refers not only to
+      <a href="/wiki/Multithreading_(software)" title="Multithreading (software)" class="mw-redirect">
+       multithreading
+      </a>
+      and CPU parallelism, which Go supports, but also to
+      <a href="/wiki/Asynchronous_I/O" title="Asynchronous I/O">
+       asynchrony
+      </a>
+      : letting slow operations like a database or network-read run while the program does other work, as is common in event-based servers.
+      <sup id="cite_ref-27" class="reference">
+       <a href="#cite_note-27">
+        <span>
+         [
+        </span>
+        26
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <p>
+      Go&#39;s concurrency-related syntax and types include:
+     </p>
+     <ul>
+     </ul>
+     <p>
+      From these tools one can build concurrent constructs like worker pools, pipelines (in which, say, a file is decompressed and parsed as it downloads), background calls with timeout, &#34;fan-out&#34; parallel calls to a set of services, and others.
+      <sup id="cite_ref-29" class="reference">
+       <a href="#cite_note-29">
+        <span>
+         [
+        </span>
+        28
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Channels have also found uses further from the usual notion of interprocess communication, like serving as a concurrency-safe list of recycled buffers,
+      <sup id="cite_ref-30" class="reference">
+       <a href="#cite_note-30">
+        <span>
+         [
+        </span>
+        29
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      implementing coroutines (which helped inspire the name
+      <i>
+       goroutine
+      </i>
+      ),
+      <sup id="cite_ref-31" class="reference">
+       <a href="#cite_note-31">
+        <span>
+         [
+        </span>
+        30
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      and implementing iterators.
+      <sup id="cite_ref-32" class="reference">
+       <a href="#cite_note-32">
+        <span>
+         [
+        </span>
+        31
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <p>
+      While the communicating-processes model is favored in Go, it isn&#39;t the only one: memory can be shared across goroutines (see below), and the standard
+      <code>
+       sync
+      </code>
+      module provides locks and other primitives.
+      <sup id="cite_ref-33" class="reference">
+       <a href="#cite_note-33">
+        <span>
+         [
+        </span>
+        32
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <h4>
+      <span class="mw-headline" id="Race_condition_safety">
+       Race condition safety
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=7" title="Edit section: Race condition safety">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h4>
+     <p>
+      There are no restrictions on how goroutines access shared data, making
+      <a href="/wiki/Race_conditions" title="Race conditions" class="mw-redirect">
+       race conditions
+      </a>
+      possible. Specifically, unless a program explicitly synchronizes via channels or other means, writes from one goroutine might be partly, entirely, or not at all visible to another, often with no guarantees about ordering of writes.
+      <sup id="cite_ref-memmodel_34-0" class="reference">
+       <a href="#cite_note-memmodel-34">
+        <span>
+         [
+        </span>
+        33
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Furthermore, Go&#39;s
+      <i>
+       internal data structures
+      </i>
+      like interface values, slice headers, and string headers are not immune to race conditions, so type and memory safety can be violated in multithreaded programs that modify shared instances of those types without synchronization.
+      <sup id="cite_ref-35" class="reference">
+       <a href="#cite_note-35">
+        <span>
+         [
+        </span>
+        34
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      <sup id="cite_ref-SPLASH2012_36-0" class="reference">
+       <a href="#cite_note-SPLASH2012-36">
+        <span>
+         [
+        </span>
+        35
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <p>
+      Idiomatic Go minimizes sharing of data (and thus potential race conditions) by communicating over channels, and a race-condition tester is included in the standard distribution to help catch unsafe behavior. Still, it is important to realize that while Go provides
+      <i>
+       building blocks
+      </i>
+      that can be used to write correct, comprehensible concurrent code, arbitrary code isn&#39;t
+      <i>
+       guaranteed
+      </i>
+      to be safe.
+     </p>
+     <p>
+      Some concurrency-related structural conventions of Go (
+      <a href="/wiki/Channel_(programming)" title="Channel (programming)">
+       channels
+      </a>
+      and alternative channel inputs) are derived from
+      <a href="/wiki/C._A._R._Hoare" title="C. A. R. Hoare" class="mw-redirect">
+       Tony Hoare&#39;s
+      </a>
+      <a href="/wiki/Communicating_sequential_processes" title="Communicating sequential processes">
+       communicating sequential processes
+      </a>
+      model. Unlike previous concurrent programming languages such as
+      <a href="/wiki/Occam_(programming_language)" title="Occam (programming language)">
+       occam
+      </a>
+      or
+      <a href="/wiki/Limbo_(programming_language)" title="Limbo (programming language)">
+       Limbo
+      </a>
+      (a language on which Go co-designer Rob Pike worked
+      <sup id="cite_ref-37" class="reference">
+       <a href="#cite_note-37">
+        <span>
+         [
+        </span>
+        36
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      ), Go does not provide any built-in notion of safe or verifiable concurrency.
+      <sup id="cite_ref-memmodel_34-1" class="reference">
+       <a href="#cite_note-memmodel-34">
+        <span>
+         [
+        </span>
+        33
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <h3>
+      <span class="mw-headline" id="Interface_system">
+       Interface system
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=8" title="Edit section: Interface system">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h3>
+     <p>
+      In place of
+      <a href="/wiki/Virtual_inheritance" title="Virtual inheritance">
+       virtual inheritance
+      </a>
+      , Go uses
+      <i>
+       <a href="/wiki/Protocol_(object-oriented_programming)" title="Protocol (object-oriented programming)">
+        interfaces
+       </a>
+      </i>
+      . An interface declaration is nothing but a list of required methods: for example, implementing
+      <code>
+       io.Reader
+      </code>
+      requires a
+      <code>
+       Read
+      </code>
+      method that takes a
+      <code>
+       []byte
+      </code>
+      and returns a count of bytes read and any error.
+      <sup id="cite_ref-38" class="reference">
+       <a href="#cite_note-38">
+        <span>
+         [
+        </span>
+        37
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Code calling
+      <code>
+       Read
+      </code>
+      needn&#39;t know whether it&#39;s reading from an HTTP connection, a file, an in-memory buffer, or any other source.
+     </p>
+     <p>
+      Go&#39;s standard library defines interfaces for a number of concepts:
+      <a rel="nofollow" class="external text" href="http://golang.org/pkg/io/#Reader">
+       input sources
+      </a>
+      and
+      <a rel="nofollow" class="external text" href="http://golang.org/pkg/io/#Writer">
+       output sinks,
+      </a>
+      <a rel="nofollow" class="external text" href="http://golang.org/pkg/sort/#Interface">
+       sortable collections,
+      </a>
+      <a rel="nofollow" class="external text" href="http://golang.org/pkg/fmt/#Stringer">
+       objects printable as strings,
+      </a>
+      <a rel="nofollow" class="external text" href="http://golang.org/pkg/hash/#Hash">
+       cryptographic hashes
+      </a>
+      , and so on.
+     </p>
+     <p>
+      Go types don&#39;t declare which interfaces they implement: having the required methods
+      <i>
+       is
+      </i>
+      implementing the interface. In formal language, Go&#39;s interface system provides
+      <a href="/wiki/Structural_type_system" title="Structural type system">
+       structural
+      </a>
+      rather than
+      <a href="/wiki/Nominal_type_system" title="Nominal type system">
+       nominal
+      </a>
+      typing.
+     </p>
+     <p>
+      The example below uses the
+      <code>
+       io.Reader
+      </code>
+      and
+      <code>
+       io.Writer
+      </code>
+      interfaces to test Go&#39;s implementation of
+      <a href="/wiki/SHA-256" title="SHA-256" class="mw-redirect">
+       SHA-256
+      </a>
+      on a standard test input, 1,000,000 repeats of the character &#34;a&#34;.
+      <code>
+       RepeatByte
+      </code>
+      implements an
+      <code>
+       io.Reader
+      </code>
+      yielding an infinite stream of repeats of a byte, similar to Unix
+      <code>
+       /dev/zero
+      </code>
+      . The
+      <code>
+       main()
+      </code>
+      function uses
+      <code>
+       RepeatByte
+      </code>
+      to stream a million repeats of &#34;a&#34; into the hash function, then prints the result, which matches the expected value published online.
+      <sup id="cite_ref-39" class="reference">
+       <a href="#cite_note-39">
+        <span>
+         [
+        </span>
+        38
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Even though both reader and writer interfaces are needed to make this work, the code needn&#39;t mention either; the compiler infers what types implement what interfaces:
+     </p>
+     <div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+      <div class="go source-go">
+       <pre class="de1">
+        <span class="kw1">
+         package
+        </span>
+        main
+        <span class="kw1">
+         import
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;fmt&#34;
+        </span>
+        <span class="st0">
+         &#34;io&#34;
+        </span>
+        <span class="st0">
+         &#34;crypto/sha256&#34;
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        <span class="kw1">
+         type
+        </span>
+        RepeatByte
+        <span class="kw4">
+         byte
+        </span>
+        <span class="kw4">
+         func
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        r RepeatByte
+        <span class="sy1">
+         )
+        </span>
+        Read
+        <span class="sy1">
+         (
+        </span>
+        p
+        <span class="sy1">
+         []
+        </span>
+        <span class="kw4">
+         byte
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        n
+        <span class="kw4">
+         int
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        err error
+        <span class="sy1">
+         )
+        </span>
+        <span class="sy1">
+         {
+        </span>
+        <span class="kw1">
+         for
+        </span>
+        <span class="nu2">
+         i
+        </span>
+        <span class="sy2">
+         :=
+        </span>
+        <span class="kw1">
+         range
+        </span>
+        p
+        <span class="sy1">
+         {
+        </span>
+        p
+        <span class="sy1">
+         [
+        </span>
+        <span class="nu2">
+         i
+        </span>
+        <span class="sy1">
+         ]
+        </span>
+        <span class="sy2">
+         =
+        </span>
+        <span class="kw4">
+         byte
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        r
+        <span class="sy1">
+         )
+        </span>
+        <span class="sy1">
+         }
+        </span>
+        <span class="kw1">
+         return
+        </span>
+        <span class="kw3">
+         len
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        p
+        <span class="sy1">
+         ),
+        </span>
+        <span class="kw2">
+         nil
+        </span>
+        <span class="sy1">
+         }
+        </span>
+        <span class="kw4">
+         func
+        </span>
+        main
+        <span class="sy1">
+         ()
+        </span>
+        <span class="sy1">
+         {
+        </span>
+        testStream
+        <span class="sy2">
+         :=
+        </span>
+        RepeatByte
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#39;a&#39;
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        hasher
+        <span class="sy2">
+         :=
+        </span>
+        sha256
+        <span class="sy3">
+         .
+        </span>
+        New
+        <span class="sy1">
+         ()
+        </span>
+        io
+        <span class="sy3">
+         .
+        </span>
+        CopyN
+        <span class="sy1">
+         (
+        </span>
+        hasher
+        <span class="sy1">
+         ,
+        </span>
+        testStream
+        <span class="sy1">
+         ,
+        </span>
+        <span class="nu0">
+         1000000
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        fmt
+        <span class="sy3">
+         .
+        </span>
+        Printf
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;%x&#34;
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        hasher
+        <span class="sy3">
+         .
+        </span>
+        Sum
+        <span class="sy1">
+         (
+        </span>
+        <span class="kw2">
+         nil
+        </span>
+        <span class="sy1">
+         ))
+        </span>
+        <span class="sy1">
+         }
+        </span>
+       </pre>
+      </div>
+     </div>
+     <p>
+      (
+      <a rel="nofollow" class="external text" href="http://play.golang.org/p/MIaP4AXV_G">
+       Run or edit this example online.
+      </a>
+      )
+     </p>
+     <p>
+      Also note
+      <code>
+       type RepeatByte
+      </code>
+      is defined as a
+      <code>
+       byte
+      </code>
+      , not a
+      <code>
+       struct
+      </code>
+      . Named types in Go needn&#39;t be
+      <code>
+       struct
+      </code>
+      s, and any named type can have methods defined, satisfy interfaces, and act, for practical purposes, as objects; the standard library, for example, stores IP addresses in byte slices.
+      <sup id="cite_ref-40" class="reference">
+       <a href="#cite_note-40">
+        <span>
+         [
+        </span>
+        39
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <p>
+      Besides calling methods via interfaces, Go allows converting interface values to other types with a run-time type check. The language constructs to do so are the
+      <i>
+       type assertion
+      </i>
+      ,
+      <sup id="cite_ref-41" class="reference">
+       <a href="#cite_note-41">
+        <span>
+         [
+        </span>
+        40
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      which checks against a single potential type, and the
+      <i>
+       type switch
+      </i>
+      ,
+      <sup id="cite_ref-42" class="reference">
+       <a href="#cite_note-42">
+        <span>
+         [
+        </span>
+        41
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      which checks against multiple types.
+     </p>
+     <p>
+      <code>
+       interface{}
+      </code>
+      , the
+      <i>
+       empty interface
+      </i>
+      , is an important corner case because it can refer to an item of
+      <i>
+       any
+      </i>
+      concrete type, including primitive types like
+      <code>
+       string
+      </code>
+      . Code using the empty interface can&#39;t simply call methods (or built-in operators) on the referred-to object, but it can store the
+      <code>
+       interface{}
+      </code>
+      value, try to convert it to a more useful type via a type assertion or type switch, or inspect it with Go&#39;s
+      <code>
+       reflect
+      </code>
+      package.
+      <sup id="cite_ref-43" class="reference">
+       <a href="#cite_note-43">
+        <span>
+         [
+        </span>
+        42
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Because
+      <code>
+       interface{}
+      </code>
+      can refer to any value, it&#39;s a limited way to escape the restrictions of static typing, like
+      <code>
+       void*
+      </code>
+      in C but with additional run-time type checks.
+     </p>
+     <p>
+      Interface values are stored in memory as a pointer to data and a second pointer to run-time type information.
+      <sup id="cite_ref-44" class="reference">
+       <a href="#cite_note-44">
+        <span>
+         [
+        </span>
+        43
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Like other pointers in Go, interface values are
+      <code>
+       nil
+      </code>
+      if uninitialized.
+      <sup id="cite_ref-45" class="reference">
+       <a href="#cite_note-45">
+        <span>
+         [
+        </span>
+        44
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Unlike in environments like Java&#39;s virtual machine, there is no object header; the run-time type information is only attached to interface values. So, the system imposes no per-object memory overhead for objects not accessed via interface, similar to C
+      <code>
+       struct
+      </code>
+      s or C#
+      <code>
+       ValueType
+      </code>
+      s.
+     </p>
+     <p>
+      Go does not have
+      <a href="/wiki/Interface_inheritance" title="Interface inheritance" class="mw-redirect">
+       interface inheritance
+      </a>
+      , but one interface type can
+      <i>
+       embed
+      </i>
+      another; then the embedding interface requires all of the methods required by the embedded interface.
+      <sup id="cite_ref-46" class="reference">
+       <a href="#cite_note-46">
+        <span>
+         [
+        </span>
+        45
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <h3>
+      <span class="mw-headline" id="Omissions">
+       Omissions
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=9" title="Edit section: Omissions">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h3>
+     <p>
+      Go deliberately omits certain features common in other languages, including
+      <a href="/wiki/Generic_programming" title="Generic programming">
+       generic programming
+      </a>
+      , assertions, pointer arithmetic, and inheritance. After initially omitting
+      <a href="/wiki/Exception_handling" title="Exception handling">
+       exceptions
+      </a>
+      , the language added the
+      <code>
+       panic
+      </code>
+      /
+      <code>
+       recover
+      </code>
+      mechanism, but it is only meant for rare circumstances.
+      <sup id="cite_ref-47" class="reference">
+       <a href="#cite_note-47">
+        <span>
+         [
+        </span>
+        46
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      <sup id="cite_ref-48" class="reference">
+       <a href="#cite_note-48">
+        <span>
+         [
+        </span>
+        47
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      <sup id="cite_ref-49" class="reference">
+       <a href="#cite_note-49">
+        <span>
+         [
+        </span>
+        48
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <p>
+      The Go authors express an openness to generic programming, explicitly argue against assertions and pointer arithmetic, while defending the choice to omit type inheritance as giving a more useful language, encouraging heavy use of
+      <a href="/wiki/Protocol_(object-oriented_programming)" title="Protocol (object-oriented programming)">
+       interfaces
+      </a>
+      instead.
+      <sup id="cite_ref-langfaq_2-2" class="reference">
+       <a href="#cite_note-langfaq-2">
+        <span>
+         [
+        </span>
+        2
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <h2>
+      <span class="mw-headline" id="Conventions_and_code_style">
+       Conventions and code style
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=10" title="Edit section: Conventions and code style">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <p>
+      The Go authors and community put substantial effort into molding the style and design of Go programs:
+     </p>
+     <ul>
+     </ul>
+     <p>
+      When adapting to the Go ecosystem after working in other languages, differences in style and approach can be as important as low-level language and library differences.
+     </p>
+     <h2>
+      <span class="mw-headline" id="Language_tools">
+       Language tools
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=11" title="Edit section: Language tools">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <p>
+      Go includes the same sort of debugging, testing, and code-vetting tools as many language distributions. The Go distribution includes
+      <code>
+       go vet
+      </code>
+      , which analyzes code searching for common stylistic problems and mistakes. A profiler, unit testing tool,
+      <code>
+       gdb
+      </code>
+      debugging support, and a race condition tester are also in the distribution. The Go distribution includes its own build system, which requires only information in the Go files themselves, no separate build files.
+     </p>
+     <p>
+      There is an ecosystem of third-party tools that add to the standard distribution, such as
+      <code>
+       gocode
+      </code>
+      , which enables code autocompletion in many text editors,
+      <code>
+       goimports
+      </code>
+      (by a Go team member), which automatically adds/removes package imports as needed,
+      <code>
+       errcheck
+      </code>
+      , which detects code that might unintentionally ignore errors, and more. Plugins exist to add language support in widely used text editors, and at least one
+      <a href="/wiki/Integrated_development_environment" title="Integrated development environment">
+       IDE
+      </a>
+      ,
+      <a rel="nofollow" class="external text" href="https://github.com/visualfc/liteide">
+       LiteIDE
+      </a>
+      , targets Go in particular.
+     </p>
+     <h2>
+      <span class="mw-headline" id="Examples">
+       Examples
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=12" title="Edit section: Examples">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <h3>
+      <span class="mw-headline" id="Hello_world">
+       Hello world
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=13" title="Edit section: Hello world">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h3>
+     <p>
+      Here is a
+      <a href="/wiki/Hello_world_program" title="Hello world program" class="mw-redirect">
+       Hello world program
+      </a>
+      in Go:
+     </p>
+     <div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+      <div class="go source-go">
+       <pre class="de1">
+        <span class="kw1">
+         package
+        </span>
+        main
+        <span class="kw1">
+         import
+        </span>
+        <span class="st0">
+         &#34;fmt&#34;
+        </span>
+        <span class="kw4">
+         func
+        </span>
+        main
+        <span class="sy1">
+         ()
+        </span>
+        <span class="sy1">
+         {
+        </span>
+        fmt
+        <span class="sy3">
+         .
+        </span>
+        Println
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;Hello, World&#34;
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        <span class="sy1">
+         }
+        </span>
+       </pre>
+      </div>
+     </div>
+     <p>
+      (
+      <a rel="nofollow" class="external text" href="http://play.golang.org/p/6wn73kqMxi">
+       Run or edit this example online.
+      </a>
+      )
+     </p>
+     <h3>
+      <span class="mw-headline" id="Echo">
+       Echo
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=14" title="Edit section: Echo">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h3>
+     <p>
+      This imitates the Unix
+      <a href="/wiki/Echo_(command)" title="Echo (command)">
+       echo command
+      </a>
+      in Go:
+      <sup id="cite_ref-51" class="reference">
+       <a href="#cite_note-51">
+        <span>
+         [
+        </span>
+        50
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+      <div class="go source-go">
+       <pre class="de1">
+        <span class="kw1">
+         package
+        </span>
+        main
+        <span class="kw1">
+         import
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;flag&#34;
+        </span>
+        <span class="st0">
+         &#34;fmt&#34;
+        </span>
+        <span class="st0">
+         &#34;strings&#34;
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        <span class="kw4">
+         func
+        </span>
+        main
+        <span class="sy1">
+         ()
+        </span>
+        <span class="sy1">
+         {
+        </span>
+        <span class="kw1">
+         var
+        </span>
+        omitNewline
+        <span class="kw4">
+         bool
+        </span>
+        flag
+        <span class="sy3">
+         .
+        </span>
+        BoolVar
+        <span class="sy1">
+         (
+        </span>
+        &amp;omitNewline
+        <span class="sy1">
+         ,
+        </span>
+        <span class="st0">
+         &#34;n&#34;
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        <span class="kw2">
+         false
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        <span class="st0">
+         &#34;don&#39;t print final newline&#34;
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        flag
+        <span class="sy3">
+         .
+        </span>
+        <span class="me1">
+         Parse
+        </span>
+        <span class="sy1">
+         ()
+        </span>
+        <span class="co1">
+         // Scans the arg list and sets up flags.
+        </span>
+        str
+        <span class="sy2">
+         :=
+        </span>
+        strings
+        <span class="sy3">
+         .
+        </span>
+        <span class="me1">
+         Join
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        flag
+        <span class="sy3">
+         .
+        </span>
+        <span class="me1">
+         Args
+        </span>
+        <span class="sy1">
+         (),
+        </span>
+        <span class="st0">
+         &#34; &#34;
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        <span class="kw1">
+         if
+        </span>
+        omitNewline
+        <span class="sy1">
+         {
+        </span>
+        fmt
+        <span class="sy3">
+         .
+        </span>
+        Print
+        <span class="sy1">
+         (
+        </span>
+        str
+        <span class="sy1">
+         )
+        </span>
+        <span class="sy1">
+         }
+        </span>
+        <span class="kw1">
+         else
+        </span>
+        <span class="sy1">
+         {
+        </span>
+        fmt
+        <span class="sy3">
+         .
+        </span>
+        Println
+        <span class="sy1">
+         (
+        </span>
+        str
+        <span class="sy1">
+         )
+        </span>
+        <span class="sy1">
+         }
+        </span>
+        <span class="sy1">
+         }
+        </span>
+       </pre>
+      </div>
+     </div>
+     <h3>
+      <span class="mw-headline" id="File_Read">
+       File Read
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=15" title="Edit section: File Read">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h3>
+     <div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+      <div class="go source-go">
+       <pre class="de1">
+        <span class="co1">
+         // Reading and writing files are basic tasks needed for
+        </span>
+        <span class="co1">
+         // many Go programs. First we&#39;ll look at some examples of
+        </span>
+        <span class="co1">
+         // reading files.
+        </span>
+        <span class="kw1">
+         package
+        </span>
+        main
+        <span class="kw1">
+         import
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;bufio&#34;
+        </span>
+        <span class="st0">
+         &#34;fmt&#34;
+        </span>
+        <span class="st0">
+         &#34;io&#34;
+        </span>
+        <span class="st0">
+         &#34;io/ioutil&#34;
+        </span>
+        <span class="st0">
+         &#34;os&#34;
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        <span class="co1">
+         // Reading files requires checking most calls for errors.
+        </span>
+        <span class="co1">
+         // This helper will streamline our error checks below.
+        </span>
+        <span class="kw4">
+         func
+        </span>
+        check
+        <span class="sy1">
+         (
+        </span>
+        e error
+        <span class="sy1">
+         )
+        </span>
+        <span class="sy1">
+         {
+        </span>
+        <span class="kw1">
+         if
+        </span>
+        e
+        <span class="sy2">
+         !=
+        </span>
+        <span class="kw2">
+         nil
+        </span>
+        <span class="sy1">
+         {
+        </span>
+        <span class="kw3">
+         panic
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        e
+        <span class="sy1">
+         )
+        </span>
+        <span class="sy1">
+         }
+        </span>
+        <span class="sy1">
+         }
+        </span>
+        <span class="kw4">
+         func
+        </span>
+        main
+        <span class="sy1">
+         ()
+        </span>
+        <span class="sy1">
+         {
+        </span>
+        <span class="co1">
+         // Perhaps the most basic file reading task is
+        </span>
+        <span class="co1">
+         // slurping a file&#39;s entire contents into memory.
+        </span>
+        dat
+        <span class="sy1">
+         ,
+        </span>
+        err
+        <span class="sy2">
+         :=
+        </span>
+        ioutil
+        <span class="sy3">
+         .
+        </span>
+        <span class="me1">
+         ReadFile
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;/tmp/dat&#34;
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        check
+        <span class="sy1">
+         (
+        </span>
+        err
+        <span class="sy1">
+         )
+        </span>
+        fmt
+        <span class="sy3">
+         .
+        </span>
+        Print
+        <span class="sy1">
+         (
+        </span>
+        <span class="kw4">
+         string
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        dat
+        <span class="sy1">
+         ))
+        </span>
+        <span class="co1">
+         // You&#39;ll often want more control over how and what
+        </span>
+        <span class="co1">
+         // parts of a file are read. For these tasks, start
+        </span>
+        <span class="co1">
+         // by `Open`ing a file to obtain an `os.File` value.
+        </span>
+        f
+        <span class="sy1">
+         ,
+        </span>
+        err
+        <span class="sy2">
+         :=
+        </span>
+        os
+        <span class="sy3">
+         .
+        </span>
+        <span class="me1">
+         Open
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;/tmp/dat&#34;
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        check
+        <span class="sy1">
+         (
+        </span>
+        err
+        <span class="sy1">
+         )
+        </span>
+        <span class="co1">
+         // Read some bytes from the beginning of the file.
+        </span>
+        <span class="co1">
+         // Allow up to 5 to be read but also note how many
+        </span>
+        <span class="co1">
+         // actually were read.
+        </span>
+        b1
+        <span class="sy2">
+         :=
+        </span>
+        <span class="kw3">
+         make
+        </span>
+        <span class="sy1">
+         ([]
+        </span>
+        <span class="kw4">
+         byte
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        <span class="nu0">
+         5
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        n1
+        <span class="sy1">
+         ,
+        </span>
+        err
+        <span class="sy2">
+         :=
+        </span>
+        f
+        <span class="sy3">
+         .
+        </span>
+        Read
+        <span class="sy1">
+         (
+        </span>
+        b1
+        <span class="sy1">
+         )
+        </span>
+        check
+        <span class="sy1">
+         (
+        </span>
+        err
+        <span class="sy1">
+         )
+        </span>
+        fmt
+        <span class="sy3">
+         .
+        </span>
+        Printf
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;%d bytes: %s
+         <span class="es1">
+          \n
+         </span>
+         &#34;
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        n1
+        <span class="sy1">
+         ,
+        </span>
+        <span class="kw4">
+         string
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        b1
+        <span class="sy1">
+         ))
+        </span>
+        <span class="co1">
+         // You can also `Seek` to a known location in the file
+        </span>
+        <span class="co1">
+         // and `Read` from there.
+        </span>
+        o2
+        <span class="sy1">
+         ,
+        </span>
+        err
+        <span class="sy2">
+         :=
+        </span>
+        f
+        <span class="sy3">
+         .
+        </span>
+        Seek
+        <span class="sy1">
+         (
+        </span>
+        <span class="nu0">
+         6
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        <span class="nu0">
+         0
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        check
+        <span class="sy1">
+         (
+        </span>
+        err
+        <span class="sy1">
+         )
+        </span>
+        b2
+        <span class="sy2">
+         :=
+        </span>
+        <span class="kw3">
+         make
+        </span>
+        <span class="sy1">
+         ([]
+        </span>
+        <span class="kw4">
+         byte
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        <span class="nu0">
+         2
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        n2
+        <span class="sy1">
+         ,
+        </span>
+        err
+        <span class="sy2">
+         :=
+        </span>
+        f
+        <span class="sy3">
+         .
+        </span>
+        Read
+        <span class="sy1">
+         (
+        </span>
+        b2
+        <span class="sy1">
+         )
+        </span>
+        check
+        <span class="sy1">
+         (
+        </span>
+        err
+        <span class="sy1">
+         )
+        </span>
+        fmt
+        <span class="sy3">
+         .
+        </span>
+        Printf
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;%d bytes @ %d: %s
+         <span class="es1">
+          \n
+         </span>
+         &#34;
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        n2
+        <span class="sy1">
+         ,
+        </span>
+        o2
+        <span class="sy1">
+         ,
+        </span>
+        <span class="kw4">
+         string
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        b2
+        <span class="sy1">
+         ))
+        </span>
+        <span class="co1">
+         // The `io` package provides some functions that may
+        </span>
+        <span class="co1">
+         // be helpful for file reading. For example, reads
+        </span>
+        <span class="co1">
+         // like the ones above can be more robustly
+        </span>
+        <span class="co1">
+         // implemented with `ReadAtLeast`.
+        </span>
+        o3
+        <span class="sy1">
+         ,
+        </span>
+        err
+        <span class="sy2">
+         :=
+        </span>
+        f
+        <span class="sy3">
+         .
+        </span>
+        Seek
+        <span class="sy1">
+         (
+        </span>
+        <span class="nu0">
+         6
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        <span class="nu0">
+         0
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        check
+        <span class="sy1">
+         (
+        </span>
+        err
+        <span class="sy1">
+         )
+        </span>
+        b3
+        <span class="sy2">
+         :=
+        </span>
+        <span class="kw3">
+         make
+        </span>
+        <span class="sy1">
+         ([]
+        </span>
+        <span class="kw4">
+         byte
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        <span class="nu0">
+         2
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        n3
+        <span class="sy1">
+         ,
+        </span>
+        err
+        <span class="sy2">
+         :=
+        </span>
+        io
+        <span class="sy3">
+         .
+        </span>
+        ReadAtLeast
+        <span class="sy1">
+         (
+        </span>
+        f
+        <span class="sy1">
+         ,
+        </span>
+        b3
+        <span class="sy1">
+         ,
+        </span>
+        <span class="nu0">
+         2
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        check
+        <span class="sy1">
+         (
+        </span>
+        err
+        <span class="sy1">
+         )
+        </span>
+        fmt
+        <span class="sy3">
+         .
+        </span>
+        Printf
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;%d bytes @ %d: %s
+         <span class="es1">
+          \n
+         </span>
+         &#34;
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        n3
+        <span class="sy1">
+         ,
+        </span>
+        o3
+        <span class="sy1">
+         ,
+        </span>
+        <span class="kw4">
+         string
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        b3
+        <span class="sy1">
+         ))
+        </span>
+        <span class="co1">
+         // There is no built-in rewind, but `Seek(0, 0)`
+        </span>
+        <span class="co1">
+         // accomplishes this.
+        </span>
+        _
+        <span class="sy1">
+         ,
+        </span>
+        err
+        <span class="sy2">
+         =
+        </span>
+        f
+        <span class="sy3">
+         .
+        </span>
+        Seek
+        <span class="sy1">
+         (
+        </span>
+        <span class="nu0">
+         0
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        <span class="nu0">
+         0
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        check
+        <span class="sy1">
+         (
+        </span>
+        err
+        <span class="sy1">
+         )
+        </span>
+        <span class="co1">
+         // The `bufio` package implements a buffered
+        </span>
+        <span class="co1">
+         // reader that may be useful both for its efficiency
+        </span>
+        <span class="co1">
+         // with many small reads and because of the additional
+        </span>
+        <span class="co1">
+         // reading methods it provides.
+        </span>
+        r4
+        <span class="sy2">
+         :=
+        </span>
+        bufio
+        <span class="sy3">
+         .
+        </span>
+        NewReader
+        <span class="sy1">
+         (
+        </span>
+        f
+        <span class="sy1">
+         )
+        </span>
+        b4
+        <span class="sy1">
+         ,
+        </span>
+        err
+        <span class="sy2">
+         :=
+        </span>
+        r4
+        <span class="sy3">
+         .
+        </span>
+        Peek
+        <span class="sy1">
+         (
+        </span>
+        <span class="nu0">
+         5
+        </span>
+        <span class="sy1">
+         )
+        </span>
+        check
+        <span class="sy1">
+         (
+        </span>
+        err
+        <span class="sy1">
+         )
+        </span>
+        fmt
+        <span class="sy3">
+         .
+        </span>
+        Printf
+        <span class="sy1">
+         (
+        </span>
+        <span class="st0">
+         &#34;5 bytes: %s
+         <span class="es1">
+          \n
+         </span>
+         &#34;
+        </span>
+        <span class="sy1">
+         ,
+        </span>
+        <span class="kw4">
+         string
+        </span>
+        <span class="sy1">
+         (
+        </span>
+        b4
+        <span class="sy1">
+         ))
+        </span>
+        <span class="co1">
+         // Close the file when you&#39;re done (usually this would
+        </span>
+        <span class="co1">
+         // be scheduled immediately after `Open`ing with
+        </span>
+        <span class="co1">
+         // `defer`).
+        </span>
+        f
+        <span class="sy3">
+         .
+        </span>
+        <span class="me1">
+         Close
+        </span>
+        <span class="sy1">
+         ()
+        </span>
+        <span class="sy1">
+         }
+        </span>
+       </pre>
+      </div>
+     </div>
+     <p>
+      <sup id="cite_ref-52" class="reference">
+       <a href="#cite_note-52">
+        <span>
+         [
+        </span>
+        51
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      <sup id="cite_ref-53" class="reference">
+       <a href="#cite_note-53">
+        <span>
+         [
+        </span>
+        52
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <h2>
+      <span class="mw-headline" id="Notable_users">
+       Notable users
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=16" title="Edit section: Notable users">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <p>
+      Some notable
+      <a href="/wiki/Open-source" title="Open-source" class="mw-redirect">
+       open-source
+      </a>
+      applications in Go include:
+     </p>
+     <ul>
+     </ul>
+     <p>
+      Other companies and sites using Go (generally together with other languages, not exclusively) include:
+      <sup id="cite_ref-54" class="reference">
+       <a href="#cite_note-54">
+        <span>
+         [
+        </span>
+        53
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      <sup id="cite_ref-55" class="reference">
+       <a href="#cite_note-55">
+        <span>
+         [
+        </span>
+        54
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <ul>
+     </ul>
+     <h2>
+      <span class="mw-headline" id="Libraries">
+       Libraries
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=17" title="Edit section: Libraries">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <p>
+      Go&#39;s open-source libraries include:
+     </p>
+     <ul>
+     </ul>
+     <p>
+      Some sites help index the libraries outside the Go distribution:
+     </p>
+     <ul>
+     </ul>
+     <h2>
+      <span class="mw-headline" id="Community_and_conferences">
+       Community and conferences
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=18" title="Edit section: Community and conferences">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <ul>
+     </ul>
+     <h2>
+      <span class="mw-headline" id="Reception">
+       Reception
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=19" title="Edit section: Reception">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <p>
+      Go&#39;s initial release led to much discussion.
+     </p>
+     <p>
+      Michele Simionato wrote in an article for artima.com:
+      <sup id="cite_ref-63" class="reference">
+       <a href="#cite_note-63">
+        <span>
+         [
+        </span>
+        62
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <blockquote class="templatequote">
+      <p>
+       Here I just wanted to point out the design choices about interfaces and inheritance. Such ideas are not new and it is a shame that no popular language has followed such particular route in the design space. I hope Go will become popular; if not, I hope such ideas will finally enter in a popular language, we are already 10 or 20 years too late :-(
+      </p>
+     </blockquote>
+     <p>
+      Dave Astels at
+      <a href="/wiki/Engine_Yard" title="Engine Yard">
+       Engine Yard
+      </a>
+      wrote:
+      <sup id="cite_ref-64" class="reference">
+       <a href="#cite_note-64">
+        <span>
+         [
+        </span>
+        63
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <blockquote class="templatequote">
+      <p>
+       Go is extremely easy to dive into. There are a minimal number of fundamental language concepts and the
+       <a href="/wiki/Syntax_(programming_languages)" title="Syntax (programming languages)">
+        syntax
+       </a>
+       is clean and designed to be clear and unambiguous. Go is still experimental and still a little rough around the edges.
+      </p>
+     </blockquote>
+     <p>
+      <i>
+       <a href="/wiki/Ars_Technica" title="Ars Technica">
+        Ars Technica
+       </a>
+      </i>
+      interviewed Rob Pike, one of the authors of Go, and asked why a new language was needed. He replied that:
+      <sup id="cite_ref-ars_65-0" class="reference">
+       <a href="#cite_note-ars-65">
+        <span>
+         [
+        </span>
+        64
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <blockquote class="templatequote">
+      <p>
+       It wasn&#39;t enough to just add features to existing programming languages, because sometimes you can get more in the long run by taking things away. They wanted to start from scratch and rethink everything. ... [But they did not want] to deviate too much from what developers already knew because they wanted to avoid alienating Go&#39;s target audience.
+      </p>
+     </blockquote>
+     <p>
+      Go was named Programming Language of the Year by the
+      <a href="/wiki/TIOBE_Programming_Community_Index" title="TIOBE Programming Community Index" class="mw-redirect">
+       TIOBE Programming Community Index
+      </a>
+      in its first year, 2009, for having a larger 12-month increase in popularity (in only 2 months, after its introduction in November) than any other language that year, and reached 13th place by January 2010,
+      <sup id="cite_ref-66" class="reference">
+       <a href="#cite_note-66">
+        <span>
+         [
+        </span>
+        65
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      surpassing established languages like
+      <a href="/wiki/Pascal_(programming_language)" title="Pascal (programming language)">
+       Pascal
+      </a>
+      . As of August 2014
+      <sup class="plainlinks noprint asof-tag update" style="display:none;">
+       <a class="external text" href="//en.wikipedia.org/w/index.php?title=Go_(programming_language)&amp;action=edit">
+        [update]
+       </a>
+      </sup>
+      , its ranking had dropped to 38th in the index, placing it lower than
+      <a href="/wiki/COBOL" title="COBOL">
+       COBOL
+      </a>
+      and
+      <a href="/wiki/Fortran" title="Fortran">
+       Fortran
+      </a>
+      .
+      <sup id="cite_ref-67" class="reference">
+       <a href="#cite_note-67">
+        <span>
+         [
+        </span>
+        66
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      Go is already in commercial use by several large organizations.
+      <sup id="cite_ref-68" class="reference">
+       <a href="#cite_note-68">
+        <span>
+         [
+        </span>
+        67
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <p>
+      Regarding Go,
+      <a href="/wiki/Bruce_Eckel" title="Bruce Eckel">
+       Bruce Eckel
+      </a>
+      has stated:
+      <sup id="cite_ref-69" class="reference">
+       <a href="#cite_note-69">
+        <span>
+         [
+        </span>
+        68
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <blockquote class="templatequote">
+      <p>
+       The complexity of
+       <a href="/wiki/C%2B%2B" title="C++">
+        C++
+       </a>
+       (even more complexity has been added in the new C++), and the resulting impact on productivity, is no longer justified. All the hoops that the C++ programmer had to jump through in order to use a C-compatible language make no sense anymore -- they&#39;re just a waste of time and effort. Now, Go makes much more sense for the class of problems that C++ was originally intended to solve.
+      </p>
+     </blockquote>
+     <h2>
+      <span class="mw-headline" id="Mascot">
+       Mascot
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=20" title="Edit section: Mascot">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <p>
+      Go&#39;s mascot is a
+      <a href="/wiki/Gopher_(animal)" title="Gopher (animal)" class="mw-redirect">
+       gopher
+      </a>
+      designed by
+      <a href="/wiki/Ren%C3%A9e_French" title="Renée French">
+       Renée French
+      </a>
+      , who also designed
+      <a href="/wiki/Glenda,_the_Plan_9_Bunny" title="Glenda, the Plan 9 Bunny">
+       Glenda, the Plan 9 Bunny
+      </a>
+      . The logo and mascot are licensed under
+      <a href="/wiki/Creative_Commons" title="Creative Commons">
+       Creative Commons
+      </a>
+      Attribution 3.0 license.
+      <sup id="cite_ref-70" class="reference">
+       <a href="#cite_note-70">
+        <span>
+         [
+        </span>
+        69
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <h2>
+      <span class="mw-headline" id="Naming_dispute">
+       Naming dispute
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=21" title="Edit section: Naming dispute">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <p>
+      On the day of the general release of the language, Francis McCabe, developer of the
+      <a href="/wiki/Go!_(programming_language)" title="Go! (programming language)">
+       Go! programming language
+      </a>
+      (note the
+      <a href="/wiki/Exclamation_point" title="Exclamation point" class="mw-redirect">
+       exclamation point
+      </a>
+      ), requested a name change of Google&#39;s language to prevent confusion with his language.
+      <sup id="cite_ref-infoweek_71-0" class="reference">
+       <a href="#cite_note-infoweek-71">
+        <span>
+         [
+        </span>
+        70
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+      The issue was closed by a Google developer on 12 October 2010 with the custom status &#34;Unfortunate&#34; and with the following comment: &#34;there are many computing products and services named Go. In the 11 months since our release, there has been minimal confusion of the two languages.&#34;
+      <sup id="cite_ref-72" class="reference">
+       <a href="#cite_note-72">
+        <span>
+         [
+        </span>
+        71
+        <span>
+         ]
+        </span>
+       </a>
+      </sup>
+     </p>
+     <h2>
+      <span class="mw-headline" id="See_also">
+       See also
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=22" title="Edit section: See also">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <ul>
+     </ul>
+     <div class="noprint tright portal" style="border:solid #aaa 1px;margin:0.5em 0 0.5em 1em;">
+      <table style="background:#f9f9f9;font-size:85%;line-height:110%;max-width:175px;">
+       <tbody>
+        <tr valign="middle">
+         <td style="text-align:center;">
+          <a href="/wiki/File:Free_and_open-source_software_logo_(2009).svg" class="image">
+           <img alt="Portal icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/28px-Free_and_open-source_software_logo_%282009%29.svg.png" width="28" height="28" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512">
+          </a>
+         </td>
+         <td style="padding:0 0.2em;vertical-align:middle;font-style:italic;font-weight:bold;">
+          <a href="/wiki/Portal:Free_software" title="Portal:Free software">
+           Free software portal
+          </a>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <h2>
+      <span class="mw-headline" id="Notes">
+       Notes
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=23" title="Edit section: Notes">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <div class="reflist" style="list-style-type: lower-alpha;">
+      <ol class="references">
+      </ol>
+     </div>
+     <h2>
+      <span class="mw-headline" id="References">
+       References
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=24" title="Edit section: References">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <div class="hatnote">
+      This article incorporates material from the
+      <a rel="nofollow" class="external text" href="http://golang.org/doc/go_tutorial.html">
+       official Go tutorial
+      </a>
+      , which is licensed under the Creative Commons Attribution 3.0 license.
+     </div>
+     <div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+      <ol class="references">
+      </ol>
+     </div>
+     <h2>
+      <span class="mw-headline" id="External_links">
+       External links
+      </span>
+      <span class="mw-editsection">
+       <span class="mw-editsection-bracket">
+        [
+       </span>
+       <a href="/w/index.php?title=Go_(programming_language)&amp;action=edit&amp;section=25" title="Edit section: External links">
+        edit
+       </a>
+       <span class="mw-editsection-bracket">
+        ]
+       </span>
+      </span>
+     </h2>
+     <ul>
+     </ul>
+     <table cellspacing="0" class="navbox" style="border-spacing:0;">
+      <tbody>
+       <tr>
+        <td style="padding:2px;">
+         <table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+          <tbody>
+           <tr>
+            <th scope="col" class="navbox-title" colspan="2">
+             <div class="plainlinks hlist navbar mini">
+              <ul>
+              </ul>
+             </div>
+             <div style="font-size:110%;">
+              <a href="/wiki/Google" title="Google">
+               Google
+              </a>
+             </div>
+            </th>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             <a href="/wiki/Outline_of_Google" title="Outline of Google">
+              Overview
+             </a>
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Advertising
+            </th>
+            <td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Communication
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Software
+            </th>
+            <td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             <a href="/wiki/Google_platform" title="Google platform">
+              Platforms
+             </a>
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Development tools
+            </th>
+            <td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Publishing
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             <a href="/wiki/Google_Search" title="Google Search">
+              Search
+             </a>
+             (
+             <a href="/wiki/Timeline_of_Google_Search" title="Timeline of Google Search">
+              timeline
+             </a>
+             )
+            </th>
+            <td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+             <table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+              <tbody>
+               <tr>
+                <th scope="row" class="navbox-group">
+                 Algorithms
+                </th>
+                <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+                 <div style="padding:0em 0.25em;">
+                  <ul>
+                  </ul>
+                 </div>
+                </td>
+               </tr>
+               <tr style="height:2px;">
+                <td colspan="2">
+                </td>
+               </tr>
+               <tr>
+                <th scope="row" class="navbox-group">
+                 Analysis
+                </th>
+                <td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+                 <div style="padding:0em 0.25em;">
+                  <ul>
+                  </ul>
+                 </div>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             <a href="/wiki/List_of_Google_products#Discontinued_products_and_services" title="List of Google products">
+              Discontinued
+             </a>
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             <a href="/wiki/Category:Google" title="Category:Google">
+              Related
+             </a>
+            </th>
+            <td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+             <table cellspacing="0" class="nowraplinks navbox-subgroup" style="border-spacing:0;">
+              <tbody>
+               <tr>
+                <th scope="row" class="navbox-group">
+                 Projects
+                </th>
+                <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+                 <div style="padding:0em 0.25em;">
+                  <ul>
+                  </ul>
+                 </div>
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             People
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <td class="navbox-abovebelow" colspan="2">
+             <div>
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table cellspacing="0" class="navbox" style="border-spacing:0;">
+      <tbody>
+       <tr>
+        <td style="padding:2px;">
+         <table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+          <tbody>
+           <tr>
+            <th scope="col" class="navbox-title" colspan="2">
+             <div class="plainlinks hlist navbar mini">
+              <ul>
+              </ul>
+             </div>
+             <div style="font-size:110%;">
+              <a href="/wiki/Rob_Pike" title="Rob Pike">
+               Rob Pike
+              </a>
+             </div>
+            </th>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Operating systems
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Programming languages
+            </th>
+            <td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Software
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Publications
+            </th>
+            <td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Other
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <table cellspacing="0" class="navbox" style="border-spacing:0;">
+      <tbody>
+       <tr>
+        <td style="padding:2px;">
+         <table cellspacing="0" class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+          <tbody>
+           <tr>
+            <th scope="col" class="navbox-title" colspan="2">
+             <div class="plainlinks hlist navbar mini">
+              <ul>
+              </ul>
+             </div>
+             <div style="font-size:110%;">
+              <a href="/wiki/Ken_Thompson" title="Ken Thompson">
+               Ken Thompson
+              </a>
+             </div>
+            </th>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Operating systems
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Programming languages
+            </th>
+            <td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Software
+            </th>
+            <td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+           <tr style="height:2px;">
+            <td colspan="2">
+            </td>
+           </tr>
+           <tr>
+            <th scope="row" class="navbox-group">
+             Other
+            </th>
+            <td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+             <div style="padding:0em 0.25em;">
+              <ul>
+              </ul>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <!-- 
+NewPP limit report
+Parsed by mw1055
+CPU time usage: 2.056 seconds
+Real time usage: 2.219 seconds
+Preprocessor visited node count: 4361/1000000
+Preprocessor generated node count: 17642/1500000
+Post‐expand include size: 126008/2097152 bytes
+Template argument size: 5622/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 11/500
+Lua time usage: 0.209/10.000 seconds
+Lua memory usage: 3.99 MB/50 MB
+-->
+     <!-- Saved in parser cache with key enwiki:pcache:idhash:25039021-0!*!0!!en!4!* and timestamp 20141109043131 and revision id 632918619
+ -->
+     <noscript>
+      &lt;img src=&#34;//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1&#34; alt=&#34;&#34; title=&#34;&#34; width=&#34;1&#34; height=&#34;1&#34; style=&#34;border: none; position: absolute;&#34; /&gt;
+     </noscript>
+    </div>
+    <div class="printfooter">
+     Retrieved from &#34;
+     <a dir="ltr" href="http://en.wikipedia.org/w/index.php?title=Go_(programming_language)&amp;oldid=632918619">
+      http://en.wikipedia.org/w/index.php?title=Go_(programming_language)&amp;oldid=632918619
+     </a>
+     &#34;
+    </div>
+    <div id="catlinks" class="catlinks">
+     <div id="mw-normal-catlinks" class="mw-normal-catlinks">
+      <a href="/wiki/Help:Category" title="Help:Category">
+       Categories
+      </a>
+      :
+      <ul>
+      </ul>
+     </div>
+     <div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">
+      Hidden categories:
+      <ul>
+      </ul>
+     </div>
+    </div>
+    <div class="visualClear">
+    </div>
+   </div>
+  </div>
+  <div id="mw-navigation">
+   <h2>
+    Navigation menu
+   </h2>
+   <div id="mw-head">
+    <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+     <h3 id="p-personal-label">
+      Personal tools
+     </h3>
+     <ul>
+     </ul>
+    </div>
+    <div id="left-navigation">
+     <div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+      <h3 id="p-namespaces-label">
+       Namespaces
+      </h3>
+      <ul>
+      </ul>
+     </div>
+     <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+      <h3 id="p-variants-label">
+       <span>
+        Variants
+       </span>
+       <a href="#">
+       </a>
+      </h3>
+      <div class="menu">
+       <ul>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div id="right-navigation">
+     <div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+      <h3 id="p-views-label">
+       Views
+      </h3>
+      <ul>
+      </ul>
+     </div>
+     <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+      <h3 id="p-cactions-label">
+       <span>
+        More
+       </span>
+       <a href="#">
+       </a>
+      </h3>
+      <div class="menu">
+       <ul>
+       </ul>
+      </div>
+     </div>
+     <div id="p-search" role="search">
+      <h3>
+       <label for="searchInput">
+        Search
+       </label>
+      </h3>
+      <form action="/w/index.php" id="searchform">
+       <div id="simpleSearch">
+        <input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput">
+        <input type="hidden" value="Special:Search" name="title">
+        <input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton">
+        <input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton">
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+   <div id="mw-panel">
+    <div id="p-logo" role="banner">
+     <a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page">
+     </a>
+    </div>
+    <div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+     <h3 id="p-navigation-label">
+      Navigation
+     </h3>
+     <div class="body">
+      <ul>
+      </ul>
+     </div>
+    </div>
+    <div class="portal" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+     <h3 id="p-interaction-label">
+      Interaction
+     </h3>
+     <div class="body">
+      <ul>
+      </ul>
+     </div>
+    </div>
+    <div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+     <h3 id="p-tb-label">
+      Tools
+     </h3>
+     <div class="body">
+      <ul>
+      </ul>
+     </div>
+    </div>
+    <div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+     <h3 id="p-coll-print_export-label">
+      Print/export
+     </h3>
+     <div class="body">
+      <ul>
+      </ul>
+     </div>
+    </div>
+    <div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+     <h3 id="p-lang-label">
+      Languages
+     </h3>
+     <div class="body">
+      <ul>
+      </ul>
+      <div class="after-portlet after-portlet-lang">
+       <span class="wb-langlinks-edit wb-langlinks-link">
+        <a action="edit" href="//www.wikidata.org/wiki/Q37227#sitelinks-wikipedia" text="Edit links" title="Edit interlanguage links" class="wbc-editpage">
+         Edit links
+        </a>
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="footer" role="contentinfo">
+   <ul id="footer-info">
+   </ul>
+   <ul id="footer-places">
+   </ul>
+   <ul id="footer-icons" class="noprint">
+   </ul>
+   <div style="clear:both">
+   </div>
+  </div>
+  <script>
+   /*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/
+  </script>
+  <script>
+   if(window.mw){
+mw.loader.state({"ext.globalCssJs.site":"ready","ext.globalCssJs.user":"ready","site":"loading","user":"ready","user.groups":"ready"});
+}
+  </script>
+  <script>
+   if(window.mw){
+mw.loader.load(["ext.cite","mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.featured-articles-links","mmv.bootstrap.autostart","ext.eventLogging.subscriber","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage"],null,true);
+}
+  </script>
+  <script>
+   if(window.mw){
+document.write("\u003Cscript src=\"//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=vector\u0026amp;*\"\u003E\u003C/script\u003E");
+}
+  </script>
+  <script>
+   if(window.mw){
+mw.config.set({"wgBackendResponseTime":2448,"wgHostname":"mw1055"});
+}
+  </script>
+  <frew>
+   surprise
+  </frew>
+ </body>
+</html>

@@ -49,7 +49,12 @@ func runSelectors(w io.Writer,  cmds []string, root *html.Node) error {
 		}
 	}
 	selectedNodes = append(selectedNodes, currNodes...)
-	pupDisplayer.Display(w, selectedNodes)
+	if pupInvertSelect {
+		RemoveInverseMatches(root, selectedNodes)
+		pupDisplayer.Display(w, []*html.Node{root})
+	} else {
+		pupDisplayer.Display(w, selectedNodes)
+	}
 
 	return nil
 }

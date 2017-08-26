@@ -96,6 +96,7 @@ func TestMain(t *testing.T) {
 		50: {[]string{"table.infobox tr > th:first-child json{}"}},
 		51: {[]string{"table.infobox tr > *:first-child json{}"}},
 		52: {[]string{"frew text{}"}},
+		53: {[]string{"li", "-v"}},
 	}
 
 	for i, tt := range tests {
