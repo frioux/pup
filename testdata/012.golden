@@ -17966,6 +17966,10 @@
        {
         "tag": "script",
         "text": "if(window.mw){\nmw.config.set({\"wgBackendResponseTime\":2448,\"wgHostname\":\"mw1055\"});\n}"
+       },
+       {
+        "tag": "frew",
+        "text": "surprise"
        }
       ],
       "class": "mediawiki ltr sitedir-ltr ns-0 ns-subject page-Go_programming_language skin-vector action-view vector-animateLayout",

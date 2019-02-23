@@ -273,7 +273,7 @@ func jsonify(node *html.Node) map[string]interface{} {
 			}
 		}
 	}
-	vals["tag"] = node.DataAtom.String()
+	vals["tag"] = node.Data
 	children := []interface{}{}
 	for child := node.FirstChild; child != nil; child = child.NextSibling {
 		switch child.Type {
