@@ -1,0 +1,26 @@
+[
+ {
+  "children": [
+   {
+    "children": [
+     {
+      "alt": "Golang.png",
+      "data-file-height": "440",
+      "data-file-width": "1224",
+      "height": "108",
+      "src": "//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/300px-Golang.png",
+      "srcset": "//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/450px-Golang.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/600px-Golang.png 2x",
+      "tag": "img",
+      "width": "300"
+     }
+    ],
+    "class": "image",
+    "href": "/wiki/File:Golang.png",
+    "tag": "a"
+   }
+  ],
+  "colspan": "2",
+  "style": "text-align:center",
+  "tag": "td"
+ }
+]

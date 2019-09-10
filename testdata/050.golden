@@ -1,0 +1,143 @@
+[
+ {
+  "children": [
+   {
+    "href": "/wiki/Programming_paradigm",
+    "tag": "a",
+    "text": "Paradigm(s)",
+    "title": "Programming paradigm"
+   }
+  ],
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th"
+ },
+ {
+  "children": [
+   {
+    "href": "/wiki/Software_design",
+    "tag": "a",
+    "text": "Designed by",
+    "title": "Software design"
+   }
+  ],
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th"
+ },
+ {
+  "children": [
+   {
+    "href": "/wiki/Software_developer",
+    "tag": "a",
+    "text": "Developer",
+    "title": "Software developer"
+   }
+  ],
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th"
+ },
+ {
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th",
+  "text": "Appeared in"
+ },
+ {
+  "children": [
+   {
+    "href": "/wiki/Software_release_life_cycle",
+    "tag": "a",
+    "text": "Stable release",
+    "title": "Software release life cycle"
+   }
+  ],
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th"
+ },
+ {
+  "children": [
+   {
+    "href": "/wiki/Type_system",
+    "tag": "a",
+    "text": "Typing discipline",
+    "title": "Type system"
+   }
+  ],
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th"
+ },
+ {
+  "children": [
+   {
+    "href": "/wiki/Programming_language_implementation",
+    "tag": "a",
+    "text": "Major implementations",
+    "title": "Programming language implementation"
+   }
+  ],
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th"
+ },
+ {
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th",
+  "text": "Influenced by"
+ },
+ {
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th",
+  "text": "Implementation language"
+ },
+ {
+  "children": [
+   {
+    "href": "/wiki/Operating_system",
+    "tag": "a",
+    "text": "OS",
+    "title": "Operating system"
+   }
+  ],
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th"
+ },
+ {
+  "children": [
+   {
+    "href": "/wiki/Software_license",
+    "tag": "a",
+    "text": "License",
+    "title": "Software license"
+   }
+  ],
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th"
+ },
+ {
+  "children": [
+   {
+    "href": "/wiki/Filename_extension",
+    "tag": "a",
+    "text": "Filename extension(s)",
+    "title": "Filename extension"
+   }
+  ],
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th"
+ },
+ {
+  "scope": "row",
+  "style": "text-align:left",
+  "tag": "th",
+  "text": "Website"
+ }
+]

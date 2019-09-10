@@ -92,6 +92,9 @@ func TestMain(t *testing.T) {
 		46: {[]string{"link , a:parent-of(sup) sup"}},
 		47: {[]string{"li", "--number"}},
 		48: {[]string{"li", "-n"}},
+		49: {[]string{"table.infobox tr > td:first-child json{}"}},
+		50: {[]string{"table.infobox tr > th:first-child json{}"}},
+		51: {[]string{"table.infobox tr > *:first-child json{}"}},
 	}
 
 	for i, tt := range tests {
