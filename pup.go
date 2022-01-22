@@ -16,8 +16,6 @@ import (
 //       |/ \_( # |"
 //      C/ ,--___/
 
-var VERSION string = "0.4.0"
-
 func main() {
 	// process flags and arguments
 	cmds, err := ParseArgs()

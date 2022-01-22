@@ -58,9 +58,8 @@ Flags
     -p --plain         don't escape html
     --pre              preserve preformatted text
     --charset          specify the charset for pup to use
-    --version          display version
 `
-	fmt.Fprintf(w, helpString, VERSION)
+	fmt.Fprintf(w, helpString)
 	os.Exit(exitCode)
 }
 
@@ -118,9 +117,6 @@ func ProcessFlags(cmds []string) (nonFlagCmds []string, err error) {
 		case "--charset":
 			pupCharset = cmds[i+1]
 			i++
-		case "--version":
-			fmt.Println(VERSION)
-			os.Exit(0)
 		case "-n", "--number":
 			pupDisplayer = NumDisplayer{}
 		default:
