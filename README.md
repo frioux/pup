@@ -7,17 +7,25 @@ prints to stdout, and allows the user to filter parts of the page using
 Inspired by [jq](http://stedolan.github.io/jq/), pup aims to be a
 fast and flexible way of exploring HTML from the terminal.
 
+## Friendly Fork
+
+This is a fork of the [original pup](https://github.com/EricChiang/pup), mostly to allow me to:
+
+ * use a more recent Go compiler
+ * update deps
+ * and possibly include a few other PRs
+
 ## Install
 
-Direct downloads are available through the [releases page](https://github.com/EricChiang/pup/releases/latest).
+Direct downloads are available through the [releases page](https://github.com/frioux/pup/releases/latest).
 
 If you have Go installed on your computer just run `go get`.
 
-    go get github.com/ericchiang/pup
+    go get github.com/frioux/pup
 
 If you're on OS X, use [Homebrew](http://brew.sh/) to install (no Go required).
 
-    brew install https://raw.githubusercontent.com/EricChiang/pup/master/pup.rb
+    brew install https://raw.githubusercontent.com/frioux/pup/master/pup.rb
 
 ## Quick start
 
