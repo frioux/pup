@@ -1,0 +1,95 @@
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '^1.17'
+
+      - run: go test ./...
+
+  build:
+    strategy:
+        matrix:
+          cur:
+            - {GOOS: linux, GOARCH: amd64, outfile: pup.xz}
+            - {GOOS: linux, GOARCH: arm, outfile: pup.arm.xz}
+            - {GOOS: darwin, GOARCH: amd64, outfile: pup.mac.xz}
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '^1.17'
+      - run: go build
+        env:
+          GOOS: ${{ matrix.cur.GOOS }}
+          GOARCH: ${{ matrix.cur.GOARCH }}
+      - run: xz --stdout pup > ${{ matrix.cur.outfile}}
+      - uses: actions/upload-artifact@master
+        with:
+          name: ${{ matrix.cur.outfile }}
+          path: ${{ matrix.cur.outfile }}
+
+  build-windows:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '^1.17'
+      - run: go build -o pup.exe
+        env:
+          GOOS: windows
+          GOARCH: amd64
+      - run: zip pup-windows.zip pup.exe
+      - uses: actions/upload-artifact@master
+        with:
+          name: pup-windows.zip
+          path: pup-windows.zip
+
+  release:
+    needs: [test, build, build-windows]
+    runs-on: ubuntu-20.04
+    outputs:
+        upload_url: ${{ steps.create_release.outputs.upload_url}}
+    steps:
+      - uses: anothrNick/github-tag-action@1.17.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CUSTOM_TAG: untagged-${{ github.sha }}
+
+      - id: create_release
+        uses: actions/create-release@v1
+        if: github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: untagged-${{ github.sha }}
+          release_name: Release ${{ github.sha }}
+
+  upload:
+    needs: [release]
+    strategy:
+        matrix:
+          file: ['pup.xz', 'pup-windows.zip', 'pup.arm.xz', 'pup.mac.xz']
+
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: ${{ matrix.file }}
+          path: .
+
+      - uses: actions/upload-release-asset@v1
+        if: github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.release.outputs.upload_url }}
+          asset_path: ./${{ matrix.file }}
+          asset_name: ${{ matrix.file }}
+          asset_content_type: application/x-xz
