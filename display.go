@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"regexp"
 	"strings"
 
@@ -17,7 +18,7 @@ func init() {
 }
 
 type Displayer interface {
-	Display([]*html.Node)
+	Display(io.Writer, []*html.Node)
 }
 
 func ParseDisplayer(cmd string) error {
@@ -60,15 +61,15 @@ var (
 type TreeDisplayer struct {
 }
 
-func (t TreeDisplayer) Display(nodes []*html.Node) {
+func (t TreeDisplayer) Display(w io.Writer, nodes []*html.Node) {
 	for _, node := range nodes {
-		t.printNode(node, 0)
+		t.printNode(w, node, 0)
 	}
 }
 
 // The <pre> tag indicates that the text within it should always be formatted
 // as is. See https://github.com/frioux/pup/issues/33
-func (t TreeDisplayer) printPre(n *html.Node) {
+func (t TreeDisplayer) printPre(w io.Writer, n *html.Node) {
 	switch n.Type {
 	case html.TextNode:
 		s := n.Data
@@ -78,44 +79,44 @@ func (t TreeDisplayer) printPre(n *html.Node) {
 				s = html.EscapeString(s)
 			}
 		}
-		fmt.Print(s)
+		fmt.Fprint(w, s)
 		for c := n.FirstChild; c != nil; c = c.NextSibling {
-			t.printPre(c)
+			t.printPre(w, c)
 		}
 	case html.ElementNode:
-		fmt.Printf("<%s", n.Data)
+		fmt.Fprintf(w, "<%s", n.Data)
 		for _, a := range n.Attr {
 			val := a.Val
 			if pupEscapeHTML {
 				val = html.EscapeString(val)
 			}
-			fmt.Printf(` %s="%s"`, a.Key, val)
+			fmt.Fprintf(w, ` %s="%s"`, a.Key, val)
 		}
-		fmt.Print(">")
+		fmt.Fprint(w, ">")
 		if !isVoidElement(n) {
 			for c := n.FirstChild; c != nil; c = c.NextSibling {
-				t.printPre(c)
+				t.printPre(w, c)
 			}
-			fmt.Printf("</%s>", n.Data)
+			fmt.Fprintf(w, "</%s>", n.Data)
 		}
 	case html.CommentNode:
 		data := n.Data
 		if pupEscapeHTML {
 			data = html.EscapeString(data)
 		}
-		fmt.Printf("<!--%s-->\n", data)
+		fmt.Fprintf(w, "<!--%s-->\n", data)
 		for c := n.FirstChild; c != nil; c = c.NextSibling {
-			t.printPre(c)
+			t.printPre(w, c)
 		}
 	case html.DoctypeNode, html.DocumentNode:
 		for c := n.FirstChild; c != nil; c = c.NextSibling {
-			t.printPre(c)
+			t.printPre(w, c)
 		}
 	}
 }
 
 // Print a node and all of it's children to `maxlevel`.
-func (t TreeDisplayer) printNode(n *html.Node, level int) {
+func (t TreeDisplayer) printNode(w io.Writer, n *html.Node, level int) {
 	switch n.Type {
 	case html.TextNode:
 		s := n.Data
@@ -127,22 +128,22 @@ func (t TreeDisplayer) printNode(n *html.Node, level int) {
 		}
 		s = strings.TrimSpace(s)
 		if s != "" {
-			t.printIndent(level)
-			fmt.Println(s)
+			t.printIndent(w, level)
+			fmt.Fprintln(w, s)
 		}
 	case html.ElementNode:
-		t.printIndent(level)
+		t.printIndent(w, level)
 		// TODO: allow pre with color
 		if n.DataAtom == atom.Pre && !pupPrintColor && pupPreformatted {
-			t.printPre(n)
-			fmt.Println()
+			t.printPre(w, n)
+			fmt.Fprintln(w)
 			return
 		}
 		if pupPrintColor {
-			tokenColor.Print("<")
-			tagColor.Printf("%s", n.Data)
+			tokenColor.Fprint(w, "<")
+			tagColor.Fprintf(w, "%s", n.Data)
 		} else {
-			fmt.Printf("<%s", n.Data)
+			fmt.Fprintf(w, "<%s", n.Data)
 		}
 		for _, a := range n.Attr {
 			val := a.Val
@@ -150,72 +151,72 @@ func (t TreeDisplayer) printNode(n *html.Node, level int) {
 				val = html.EscapeString(val)
 			}
 			if pupPrintColor {
-				fmt.Print(" ")
-				attrKeyColor.Printf("%s", a.Key)
-				tokenColor.Print("=")
-				quoteColor.Printf(`"%s"`, val)
+				fmt.Fprint(w, " ")
+				attrKeyColor.Fprintf(w, "%s", a.Key)
+				tokenColor.Fprint(w, "=")
+				quoteColor.Fprintf(w, `"%s"`, val)
 			} else {
-				fmt.Printf(` %s="%s"`, a.Key, val)
+				fmt.Fprintf(w, ` %s="%s"`, a.Key, val)
 			}
 		}
 		if pupPrintColor {
-			tokenColor.Println(">")
+			tokenColor.Fprintln(w, ">")
 		} else {
-			fmt.Println(">")
+			fmt.Fprintln(w, ">")
 		}
 		if !isVoidElement(n) {
-			t.printChildren(n, level+1)
-			t.printIndent(level)
+			t.printChildren(w, n, level+1)
+			t.printIndent(w, level)
 			if pupPrintColor {
-				tokenColor.Print("</")
-				tagColor.Printf("%s", n.Data)
-				tokenColor.Println(">")
+				tokenColor.Fprint(w, "</")
+				tagColor.Fprintf(w, "%s", n.Data)
+				tokenColor.Fprintln(w, ">")
 			} else {
-				fmt.Printf("</%s>\n", n.Data)
+				fmt.Fprintf(w, "</%s>\n", n.Data)
 			}
 		}
 	case html.CommentNode:
-		t.printIndent(level)
+		t.printIndent(w, level)
 		data := n.Data
 		if pupEscapeHTML {
 			data = html.EscapeString(data)
 		}
 		if pupPrintColor {
-			commentColor.Printf("<!--%s-->\n", data)
+			commentColor.Fprintf(w, "<!--%s-->\n", data)
 		} else {
-			fmt.Printf("<!--%s-->\n", data)
+			fmt.Fprintf(w, "<!--%s-->\n", data)
 		}
-		t.printChildren(n, level)
+		t.printChildren(w, n, level)
 	case html.DoctypeNode, html.DocumentNode:
-		t.printChildren(n, level)
+		t.printChildren(w, n, level)
 	}
 }
 
-func (t TreeDisplayer) printChildren(n *html.Node, level int) {
+func (t TreeDisplayer) printChildren(w io.Writer, n *html.Node, level int) {
 	if pupMaxPrintLevel > -1 {
 		if level >= pupMaxPrintLevel {
-			t.printIndent(level)
-			fmt.Println("...")
+			t.printIndent(w, level)
+			fmt.Fprintln(w, "...")
 			return
 		}
 	}
 	child := n.FirstChild
 	for child != nil {
-		t.printNode(child, level)
+		t.printNode(w, child, level)
 		child = child.NextSibling
 	}
 }
 
-func (t TreeDisplayer) printIndent(level int) {
+func (t TreeDisplayer) printIndent(w io.Writer, level int) {
 	for ; level > 0; level-- {
-		fmt.Print(pupIndentString)
+		fmt.Fprint(w, pupIndentString)
 	}
 }
 
 // Print the text of a node
 type TextDisplayer struct{}
 
-func (t TextDisplayer) Display(nodes []*html.Node) {
+func (t TextDisplayer) Display(w io.Writer, nodes []*html.Node) {
 	for _, node := range nodes {
 		if node.Type == html.TextNode {
 			data := node.Data
@@ -225,7 +226,7 @@ func (t TextDisplayer) Display(nodes []*html.Node) {
 					data = html.EscapeString(data)
 				}
 			}
-			fmt.Println(data)
+			fmt.Fprintln(w, data)
 		}
 		children := []*html.Node{}
 		child := node.FirstChild
@@ -233,7 +234,7 @@ func (t TextDisplayer) Display(nodes []*html.Node) {
 			children = append(children, child)
 			child = child.NextSibling
 		}
-		t.Display(children)
+		t.Display(w, children)
 	}
 }
 
@@ -242,7 +243,7 @@ type AttrDisplayer struct {
 	Attr string
 }
 
-func (a AttrDisplayer) Display(nodes []*html.Node) {
+func (a AttrDisplayer) Display(w io.Writer, nodes []*html.Node) {
 	for _, node := range nodes {
 		attributes := node.Attr
 		for _, attr := range attributes {
@@ -251,7 +252,7 @@ func (a AttrDisplayer) Display(nodes []*html.Node) {
 				if pupEscapeHTML {
 					val = html.EscapeString(val)
 				}
-				fmt.Printf("%s\n", val)
+				fmt.Fprintf(w, "%s\n", val)
 			}
 		}
 	}
@@ -312,7 +313,7 @@ func jsonify(node *html.Node) map[string]interface{} {
 	return vals
 }
 
-func (j JSONDisplayer) Display(nodes []*html.Node) {
+func (j JSONDisplayer) Display(w io.Writer, nodes []*html.Node) {
 	var data []byte
 	var err error
 	jsonNodes := []map[string]interface{}{}
@@ -323,12 +324,12 @@ func (j JSONDisplayer) Display(nodes []*html.Node) {
 	if err != nil {
 		panic("Could not jsonify nodes")
 	}
-	fmt.Printf("%s\n", data)
+	fmt.Fprintf(w, "%s\n", data)
 }
 
 // Print the number of features returned
 type NumDisplayer struct{}
 
-func (d NumDisplayer) Display(nodes []*html.Node) {
-	fmt.Println(len(nodes))
+func (d NumDisplayer) Display(w io.Writer, nodes []*html.Node) {
+	fmt.Fprintln(w, len(nodes))
 }

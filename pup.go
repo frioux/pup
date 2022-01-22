@@ -74,5 +74,5 @@ func main() {
 		}
 	}
 	selectedNodes = append(selectedNodes, currNodes...)
-	pupDisplayer.Display(selectedNodes)
+	pupDisplayer.Display(os.Stdout, selectedNodes)
 }
