@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"os"
-
-	"golang.org/x/net/html"
 )
 
 //      _=,_
@@ -32,47 +30,8 @@ func main() {
 	}
 	pupIn.Close()
 
-	// Parse the selectors
-	selectorFuncs := []SelectorFunc{}
-	funcGenerator := Select
-	var cmd string
-	for len(cmds) > 0 {
-		cmd, cmds = cmds[0], cmds[1:]
-		if len(cmds) == 0 {
-			if err := ParseDisplayer(cmd); err == nil {
-				continue
-			}
-		}
-		switch cmd {
-		case "*": // select all
-			continue
-		case ">":
-			funcGenerator = SelectFromChildren
-		case "+":
-			funcGenerator = SelectNextSibling
-		case ",": // nil will signify a comma
-			selectorFuncs = append(selectorFuncs, nil)
-		default:
-			selector, err := ParseSelector(cmd)
-			if err != nil {
-				fmt.Fprintf(os.Stderr, "Selector parsing error: %s\n", err.Error())
-				os.Exit(2)
-			}
-			selectorFuncs = append(selectorFuncs, funcGenerator(selector))
-			funcGenerator = Select
-		}
+	if err := runSelectors(cmds, root); err != nil {
+		fmt.Fprintf(os.Stderr, "%s\n", err.Error())
+		os.Exit(2)
 	}
-
-	selectedNodes := []*html.Node{}
-	currNodes := []*html.Node{root}
-	for _, selectorFunc := range selectorFuncs {
-		if selectorFunc == nil { // hit a comma
-			selectedNodes = append(selectedNodes, currNodes...)
-			currNodes = []*html.Node{root}
-		} else {
-			currNodes = selectorFunc(currNodes)
-		}
-	}
-	selectedNodes = append(selectedNodes, currNodes...)
-	pupDisplayer.Display(os.Stdout, selectedNodes)
 }
