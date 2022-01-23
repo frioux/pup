@@ -30,7 +30,7 @@ func main() {
 	}
 	pupIn.Close()
 
-	if err := runSelectors(cmds, root); err != nil {
+	if err := runSelectors(os.Stdout, cmds, root); err != nil {
 		fmt.Fprintf(os.Stderr, "%s\n", err.Error())
 		os.Exit(2)
 	}

@@ -1,0 +1,104 @@
+<meta charset="UTF-8">
+<meta name="generator" content="MediaWiki 1.25wmf6">
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Go_(programming_language)">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Go_(programming_language)&amp;action=edit">
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Go_(programming_language)&amp;action=edit">
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="alternate" hreflang="x-default" href="/wiki/Go_(programming_language)">
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Go_(programming_language)">
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cfeatured-articles-links%2CrefToolbar%2Cteahouse%7Cext.geshi.language.go%7Cext.geshi.local%7Cext.rtlcite%2Cwikihiero%2CwikimediaBadges%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector&amp;*">
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*">
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*">
+</script>
+<link rel="dns-prefetch" href="//meta.wikimedia.org">
+<div id="mw-page-base" class="noprint">
+</div>
+<div id="mw-head-base" class="noprint">
+</div>
+<a id="top">
+</a>
+<div id="contentSub">
+</div>
+<img alt="Golang.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/300px-Golang.png" width="300" height="108" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/450px-Golang.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/600px-Golang.png 2x" data-file-width="1224" data-file-height="440">
+<br>
+<br>
+<p>
+</p>
+<p>
+</p>
+<img alt="Portal icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/28px-Free_and_open-source_software_logo_%282009%29.svg.png" width="28" height="28" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512">
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<img alt="Project page" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Symbol_information_vote.svg/16px-Symbol_information_vote.svg.png" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Symbol_information_vote.svg/23px-Symbol_information_vote.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Symbol_information_vote.svg/31px-Symbol_information_vote.svg.png 2x" data-file-width="180" data-file-height="185">
+<img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31">
+<img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376">
+<img alt="Wikiversity page" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/16px-Wikiversity-logo.svg.png" width="16" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/24px-Wikiversity-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/32px-Wikiversity-logo.svg.png 2x" data-file-width="1000" data-file-height="800">
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<td colspan="2">
+</td>
+<div class="visualClear">
+</div>
+<a href="#">
+</a>
+<a href="#">
+</a>
+<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput">
+<input type="hidden" value="Special:Search" name="title">
+<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton">
+<input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton">
+<a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page">
+</a>
+<a href="#">
+</a>
+<br>
+<a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;">
+</a>
+<img src="//bits.wikimedia.org/images/wikimedia-button.png" srcset="//bits.wikimedia.org/images/wikimedia-button-1.5x.png 1.5x, //bits.wikimedia.org/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation">
+<img src="//bits.wikimedia.org/static-1.25wmf6/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31">
+<div style="clear:both">
+</div>

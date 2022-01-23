@@ -1,0 +1,1918 @@
+<a href="#History">
+ <span class="tocnumber">
+  1
+ </span>
+ <span class="toctext">
+  History
+ </span>
+</a>
+<a href="#Language_design">
+ <span class="tocnumber">
+  2
+ </span>
+ <span class="toctext">
+  Language design
+ </span>
+</a>
+<a href="#Syntax">
+ <span class="tocnumber">
+  2.1
+ </span>
+ <span class="toctext">
+  Syntax
+ </span>
+</a>
+<a href="#Types">
+ <span class="tocnumber">
+  2.2
+ </span>
+ <span class="toctext">
+  Types
+ </span>
+</a>
+<a href="#Package_system">
+ <span class="tocnumber">
+  2.3
+ </span>
+ <span class="toctext">
+  Package system
+ </span>
+</a>
+<a href="#Concurrency:_goroutines.2C_channels.2C_and_select">
+ <span class="tocnumber">
+  2.4
+ </span>
+ <span class="toctext">
+  Concurrency: goroutines, channels, and select
+ </span>
+</a>
+<a href="#Race_condition_safety">
+ <span class="tocnumber">
+  2.4.1
+ </span>
+ <span class="toctext">
+  Race condition safety
+ </span>
+</a>
+<a href="#Interface_system">
+ <span class="tocnumber">
+  2.5
+ </span>
+ <span class="toctext">
+  Interface system
+ </span>
+</a>
+<a href="#Omissions">
+ <span class="tocnumber">
+  2.6
+ </span>
+ <span class="toctext">
+  Omissions
+ </span>
+</a>
+<a href="#Conventions_and_code_style">
+ <span class="tocnumber">
+  3
+ </span>
+ <span class="toctext">
+  Conventions and code style
+ </span>
+</a>
+<a href="#Language_tools">
+ <span class="tocnumber">
+  4
+ </span>
+ <span class="toctext">
+  Language tools
+ </span>
+</a>
+<a href="#Examples">
+ <span class="tocnumber">
+  5
+ </span>
+ <span class="toctext">
+  Examples
+ </span>
+</a>
+<a href="#Hello_world">
+ <span class="tocnumber">
+  5.1
+ </span>
+ <span class="toctext">
+  Hello world
+ </span>
+</a>
+<a href="#Echo">
+ <span class="tocnumber">
+  5.2
+ </span>
+ <span class="toctext">
+  Echo
+ </span>
+</a>
+<a href="#File_Read">
+ <span class="tocnumber">
+  5.3
+ </span>
+ <span class="toctext">
+  File Read
+ </span>
+</a>
+<a href="#Notable_users">
+ <span class="tocnumber">
+  6
+ </span>
+ <span class="toctext">
+  Notable users
+ </span>
+</a>
+<a href="#Libraries">
+ <span class="tocnumber">
+  7
+ </span>
+ <span class="toctext">
+  Libraries
+ </span>
+</a>
+<a href="#Community_and_conferences">
+ <span class="tocnumber">
+  8
+ </span>
+ <span class="toctext">
+  Community and conferences
+ </span>
+</a>
+<a href="#Reception">
+ <span class="tocnumber">
+  9
+ </span>
+ <span class="toctext">
+  Reception
+ </span>
+</a>
+<a href="#Mascot">
+ <span class="tocnumber">
+  10
+ </span>
+ <span class="toctext">
+  Mascot
+ </span>
+</a>
+<a href="#Naming_dispute">
+ <span class="tocnumber">
+  11
+ </span>
+ <span class="toctext">
+  Naming dispute
+ </span>
+</a>
+<a href="#See_also">
+ <span class="tocnumber">
+  12
+ </span>
+ <span class="toctext">
+  See also
+ </span>
+</a>
+<a href="#Notes">
+ <span class="tocnumber">
+  13
+ </span>
+ <span class="toctext">
+  Notes
+ </span>
+</a>
+<a href="#References">
+ <span class="tocnumber">
+  14
+ </span>
+ <span class="toctext">
+  References
+ </span>
+</a>
+<a href="#External_links">
+ <span class="tocnumber">
+  15
+ </span>
+ <span class="toctext">
+  External links
+ </span>
+</a>
+<a href="/wiki/Dynamic_programming_language" title="Dynamic programming language">
+ dynamic languages
+</a>
+<a href="#cite_note-go_lang_video_2009-13">
+ <span>
+  [
+ </span>
+ 13
+ <span>
+  ]
+ </span>
+</a>
+<a href="/wiki/Type_inference" title="Type inference">
+ type inference
+</a>
+<a href="#cite_note-techtalk-compiling-14">
+ <span>
+  [
+ </span>
+ 14
+ <span>
+  ]
+ </span>
+</a>
+<a href="#cite_note-15">
+ <span>
+  [
+ </span>
+ 15
+ <span>
+  ]
+ </span>
+</a>
+<a href="#cite_note-16">
+ <span>
+  [
+ </span>
+ 16
+ <span>
+  ]
+ </span>
+</a>
+<a href="/wiki/Light-weight_process" title="Light-weight process">
+ light-weight processes
+</a>
+<a href="/wiki/Channel_(programming)" title="Channel (programming)">
+ channels
+</a>
+<a href="/wiki/Protocol_(object-oriented_programming)" title="Protocol (object-oriented programming)">
+ interface
+</a>
+<a href="/wiki/Virtual_inheritance" title="Virtual inheritance">
+ virtual inheritance
+</a>
+<a href="/wiki/Static_library" title="Static library">
+ statically linked
+</a>
+<a href="#cite_note-17">
+ <span>
+  [
+ </span>
+ 17
+ <span>
+  ]
+ </span>
+</a>
+<a href="#cite_note-18">
+ <span>
+  [
+ </span>
+ 18
+ <span>
+  ]
+ </span>
+</a>
+<a href="/wiki/Type_inheritance" title="Type inheritance" class="mw-redirect">
+ type inheritance
+</a>
+<a href="/wiki/Method_overloading" title="Method overloading" class="mw-redirect">
+ method
+</a>
+<a href="/wiki/Operator_overloading" title="Operator overloading">
+ operator overloading
+</a>
+<a href="/wiki/Circular_dependencies" title="Circular dependencies" class="mw-redirect">
+ circular dependencies
+</a>
+<a href="/wiki/Pointer_arithmetic" title="Pointer arithmetic" class="mw-redirect">
+ pointer arithmetic
+</a>
+<a href="/wiki/Assertion_(computing)" title="Assertion (computing)" class="mw-redirect">
+ assertions
+</a>
+<a href="/wiki/Generic_programming" title="Generic programming">
+ generic programming
+</a>
+<a href="/wiki/Light-weight_process" title="Light-weight process">
+ light-weight process
+</a>
+<a href="/wiki/Blocking_(computing)" title="Blocking (computing)">
+ block
+</a>
+<a href="#cite_note-28">
+ <span>
+  [
+ </span>
+ 27
+ <span>
+  ]
+ </span>
+</a>
+<a href="#cite_note-50">
+ <span>
+  [
+ </span>
+ 49
+ <span>
+  ]
+ </span>
+</a>
+<a href="/wiki/Docker_(software)" title="Docker (software)">
+ Docker
+</a>
+<a href="/wiki/Linux" title="Linux">
+ Linux
+</a>
+<a href="/wiki/Platform_as_a_service" title="Platform as a service">
+ PaaS
+</a>
+<a href="/wiki/Juju_(software)" title="Juju (software)">
+ Juju
+</a>
+<a href="/wiki/Canonical_Ltd." title="Canonical Ltd.">
+ Canonical
+</a>
+<a href="/wiki/Ubuntu_(operating_system)" title="Ubuntu (operating system)">
+ Ubuntu
+</a>
+<a href="/wiki/Bitly" title="Bitly">
+ bit.ly
+</a>
+<a href="/wiki/Heroku" title="Heroku">
+ Heroku
+</a>
+<a href="/wiki/Google" title="Google">
+ Google
+</a>
+<a href="#cite_note-56">
+ <span>
+  [
+ </span>
+ 55
+ <span>
+  ]
+ </span>
+</a>
+<a href="#cite_note-57">
+ <span>
+  [
+ </span>
+ 56
+ <span>
+  ]
+ </span>
+</a>
+<a href="#cite_note-58">
+ <span>
+  [
+ </span>
+ 57
+ <span>
+  ]
+ </span>
+</a>
+<a href="/wiki/Dropbox_(service)" title="Dropbox (service)">
+ Dropbox
+</a>
+<a href="#cite_note-59">
+ <span>
+  [
+ </span>
+ 58
+ <span>
+  ]
+ </span>
+</a>
+<a href="/wiki/CloudFlare" title="CloudFlare">
+ CloudFlare
+</a>
+<a href="#cite_note-60">
+ <span>
+  [
+ </span>
+ 59
+ <span>
+  ]
+ </span>
+</a>
+<a href="#cite_note-61">
+ <span>
+  [
+ </span>
+ 60
+ <span>
+  ]
+ </span>
+</a>
+<a href="/wiki/SoundCloud" title="SoundCloud">
+ SoundCloud
+</a>
+<a href="#cite_note-62">
+ <span>
+  [
+ </span>
+ 61
+ <span>
+  ]
+ </span>
+</a>
+<a href="/wiki/BBC" title="BBC">
+ BBC
+</a>
+<a href="/wiki/Novartis" title="Novartis">
+ Novartis
+</a>
+<a href="/wiki/Cloud_Foundry" title="Cloud Foundry">
+ Cloud Foundry
+</a>
+<a href="/wiki/Platform_as_a_service" title="Platform as a service">
+ platform as a service
+</a>
+<a href="/wiki/CoreOS" title="CoreOS">
+ CoreOS
+</a>
+<a href="/wiki/Chrome_OS" title="Chrome OS">
+ Chrome OS
+</a>
+<a href="/wiki/MongoDB" title="MongoDB">
+ MongoDB
+</a>
+<a href="/wiki/Geographic_information_systems" title="Geographic information systems" class="mw-redirect">
+ GIS
+</a>
+<a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">
+ Comparison of programming languages
+</a>
+<a href="/wiki/Dart_(programming_language)" title="Dart (programming language)">
+ Dart
+</a>
+<a href="#cite_ref-19">
+ ^
+</a>
+<a href="/wiki/Semipredicate_problem#Multivalued_return" title="Semipredicate problem">
+ Semipredicate problem: Multivalued return
+</a>
+<a href="#cite_ref-1">
+ ^
+</a>
+<a href="#cite_ref-langfaq_2-0">
+ <sup>
+  <i>
+   <b>
+    a
+   </b>
+  </i>
+ </sup>
+</a>
+<a href="#cite_ref-langfaq_2-1">
+ <sup>
+  <i>
+   <b>
+    b
+   </b>
+  </i>
+ </sup>
+</a>
+<a href="#cite_ref-langfaq_2-2">
+ <sup>
+  <i>
+   <b>
+    c
+   </b>
+  </i>
+ </sup>
+</a>
+<a href="#cite_ref-3">
+ ^
+</a>
+<a href="#cite_ref-4">
+ ^
+</a>
+<a href="#cite_ref-5">
+ ^
+</a>
+<a href="#cite_ref-6">
+ ^
+</a>
+<a href="#cite_ref-faq_7-0">
+ ^
+</a>
+<a href="#cite_ref-8">
+ ^
+</a>
+<a href="#cite_ref-9">
+ ^
+</a>
+<a href="#cite_ref-10">
+ ^
+</a>
+<a href="#cite_ref-11">
+ ^
+</a>
+<a href="#cite_ref-12">
+ ^
+</a>
+<a href="#cite_ref-go_lang_video_2009_13-0">
+ ^
+</a>
+<a href="#cite_ref-techtalk-compiling_14-0">
+ ^
+</a>
+<a href="/wiki/Rob_Pike" title="Rob Pike">
+ Rob Pike
+</a>
+<a href="#cite_ref-15">
+ ^
+</a>
+<a href="#cite_ref-16">
+ ^
+</a>
+<a href="#cite_ref-17">
+ ^
+</a>
+<a href="#cite_ref-18">
+ ^
+</a>
+<a href="#cite_ref-20">
+ ^
+</a>
+<a href="#cite_ref-21">
+ ^
+</a>
+<a href="#cite_ref-22">
+ ^
+</a>
+<a href="#cite_ref-23">
+ ^
+</a>
+<a href="#cite_ref-24">
+ ^
+</a>
+<a href="#cite_ref-25">
+ ^
+</a>
+<a href="#cite_ref-26">
+ ^
+</a>
+<a href="#cite_ref-27">
+ ^
+</a>
+<a href="#cite_ref-28">
+ ^
+</a>
+<a href="#cite_ref-29">
+ ^
+</a>
+<a href="#cite_ref-30">
+ ^
+</a>
+<a href="#cite_ref-31">
+ ^
+</a>
+<a href="#cite_ref-32">
+ ^
+</a>
+<a href="#cite_ref-33">
+ ^
+</a>
+<a href="#cite_ref-memmodel_34-0">
+ <sup>
+  <i>
+   <b>
+    a
+   </b>
+  </i>
+ </sup>
+</a>
+<a href="#cite_ref-memmodel_34-1">
+ <sup>
+  <i>
+   <b>
+    b
+   </b>
+  </i>
+ </sup>
+</a>
+<a href="#cite_ref-35">
+ ^
+</a>
+<a href="#cite_ref-SPLASH2012_36-0">
+ ^
+</a>
+<a href="/wiki/Rob_Pike" title="Rob Pike">
+ Rob Pike
+</a>
+<a href="#cite_ref-37">
+ ^
+</a>
+<a href="#cite_ref-38">
+ ^
+</a>
+<a href="#cite_ref-39">
+ ^
+</a>
+<a href="#cite_ref-40">
+ ^
+</a>
+<a href="#cite_ref-41">
+ ^
+</a>
+<a href="#cite_ref-42">
+ ^
+</a>
+<a href="#cite_ref-43">
+ ^
+</a>
+<a href="#cite_ref-44">
+ ^
+</a>
+<a href="#cite_ref-45">
+ ^
+</a>
+<a href="#cite_ref-46">
+ ^
+</a>
+<a href="#cite_ref-47">
+ ^
+</a>
+<a href="#cite_ref-48">
+ ^
+</a>
+<a href="#cite_ref-49">
+ ^
+</a>
+<a href="#cite_ref-50">
+ ^
+</a>
+<a href="#cite_ref-51">
+ ^
+</a>
+<a href="#cite_ref-52">
+ ^
+</a>
+<a href="/wiki/Help:CS1_errors#citation_missing_title" title="Help:CS1 errors">
+ help
+</a>
+<a href="#cite_ref-53">
+ ^
+</a>
+<a href="/wiki/Help:CS1_errors#citation_missing_title" title="Help:CS1 errors">
+ help
+</a>
+<a href="#cite_ref-54">
+ ^
+</a>
+<a href="#cite_ref-55">
+ ^
+</a>
+<a href="#cite_ref-56">
+ ^
+</a>
+<a href="#cite_ref-57">
+ ^
+</a>
+<a href="#cite_ref-58">
+ ^
+</a>
+<a href="#cite_ref-59">
+ ^
+</a>
+<a href="#cite_ref-60">
+ ^
+</a>
+<a href="#cite_ref-61">
+ ^
+</a>
+<a href="#cite_ref-62">
+ ^
+</a>
+<a href="#cite_ref-63">
+ ^
+</a>
+<a href="#cite_ref-64">
+ ^
+</a>
+<a href="#cite_ref-ars_65-0">
+ ^
+</a>
+<a href="#cite_ref-66">
+ ^
+</a>
+<a href="/wiki/Help:CS1_errors#first_missing_last" title="Help:CS1 errors">
+ help
+</a>
+<a href="#cite_ref-67">
+ ^
+</a>
+<a href="#cite_ref-68">
+ ^
+</a>
+<a href="#cite_ref-69">
+ ^
+</a>
+<a href="#cite_ref-70">
+ ^
+</a>
+<a href="#cite_ref-infoweek_71-0">
+ ^
+</a>
+<a href="#cite_ref-72">
+ ^
+</a>
+<a href="/wiki/Google_Inc." title="Google Inc." class="mw-redirect">
+ Google Inc.
+</a>
+<a href="/wiki/Stanford_University" title="Stanford University">
+ Stanford University
+</a>
+<a href="/wiki/Template:Google_Inc." title="Template:Google Inc.">
+ <span title="View this template" style=";;background:none transparent;border:none;;">
+  v
+ </span>
+</a>
+<a href="/wiki/Template_talk:Google_Inc." title="Template talk:Google Inc.">
+ <span title="Discuss this template" style=";;background:none transparent;border:none;;">
+  t
+ </span>
+</a>
+<a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Google_Inc.&amp;action=edit">
+ <span title="Edit this template" style=";;background:none transparent;border:none;;">
+  e
+ </span>
+</a>
+<a href="/wiki/History_of_Google" title="History of Google">
+ History
+</a>
+<a href="/wiki/List_of_mergers_and_acquisitions_by_Google" title="List of mergers and acquisitions by Google">
+ List of mergers and acquisitions
+</a>
+<a href="/wiki/List_of_Google_products" title="List of Google products">
+ Products
+</a>
+<a href="/wiki/Criticism_of_Google" title="Criticism of Google">
+ Criticism
+</a>
+<a href="/wiki/Censorship_by_Google" title="Censorship by Google">
+ Censorship
+</a>
+<a href="/wiki/List_of_Google_domains" title="List of Google domains">
+ Domains
+</a>
+<a href="/wiki/List_of_Google_hoaxes_and_easter_eggs" title="List of Google hoaxes and easter eggs">
+ Hoaxes
+</a>
+<a href="/wiki/DoubleClick_for_Publishers_by_Google" title="DoubleClick for Publishers by Google">
+ Ad Manager
+</a>
+<a href="/wiki/AdMob" title="AdMob">
+ AdMob
+</a>
+<a href="/wiki/Adscape" title="Adscape">
+ Adscape
+</a>
+<a href="/wiki/AdSense" title="AdSense">
+ AdSense
+</a>
+<a href="/wiki/Google_Certification_Program" title="Google Certification Program">
+ Advertising Professionals
+</a>
+<a href="/wiki/AdWords" title="AdWords">
+ AdWords
+</a>
+<a href="/wiki/Google_Analytics" title="Google Analytics">
+ Analytics
+</a>
+<a href="/wiki/DoubleClick" title="DoubleClick">
+ DoubleClick
+</a>
+<a href="/wiki/Google_Offers" title="Google Offers">
+ Offers
+</a>
+<a href="/wiki/Google_Wallet" title="Google Wallet">
+ Wallet
+</a>
+<a href="/wiki/Google_Alerts" title="Google Alerts">
+ Alerts
+</a>
+<a href="/wiki/Google_Apps_Script" title="Google Apps Script">
+ Apps Script
+</a>
+<a href="/wiki/Google_Calendar" title="Google Calendar">
+ Calendar
+</a>
+<a href="/wiki/Google_Contacts" title="Google Contacts">
+ Contacts
+</a>
+<a href="/wiki/Google_Friend_Connect" title="Google Friend Connect">
+ Friend Connect
+</a>
+<a href="/wiki/Gmail" title="Gmail">
+ Gmail
+</a>
+<a href="/wiki/History_of_Gmail" title="History of Gmail">
+ history
+</a>
+<a href="/wiki/Gmail_interface" title="Gmail interface">
+ interface
+</a>
+<a href="/wiki/Google%2B" title="Google+">
+ Google+
+</a>
+<a href="/wiki/Google_Groups" title="Google Groups">
+ Groups
+</a>
+<a href="/wiki/Google_Hangouts" title="Google Hangouts">
+ Hangouts
+</a>
+<a href="/wiki/Google_Inbox" title="Google Inbox">
+ Inbox
+</a>
+<a href="/wiki/Google_Sync" title="Google Sync">
+ Sync
+</a>
+<a href="/wiki/Google_Talk" title="Google Talk">
+ Talk
+</a>
+<a href="/wiki/Google_Text-to-Speech" title="Google Text-to-Speech">
+ Text-to-Speech
+</a>
+<a href="/wiki/Google_Translate" title="Google Translate">
+ Translate
+</a>
+<a href="/wiki/Google_transliteration" title="Google transliteration">
+ Transliteration
+</a>
+<a href="/wiki/Google_Voice" title="Google Voice">
+ Voice
+</a>
+<a href="/wiki/Google_Chrome" title="Google Chrome">
+ Chrome
+</a>
+<a href="/wiki/Google_Chrome_for_Android" title="Google Chrome for Android">
+ for Android
+</a>
+<a href="/wiki/Google_Chrome_for_iOS" title="Google Chrome for iOS" class="mw-redirect">
+ for iOS
+</a>
+<a href="/wiki/Chrome_Web_Store" title="Chrome Web Store">
+ Chrome Web Store
+</a>
+<a href="/wiki/Google_Chrome_Apps" title="Google Chrome Apps">
+ Apps
+</a>
+<a href="/wiki/Google_Chrome_Extensions" title="Google Chrome Extensions">
+ Extensions
+</a>
+<a href="/wiki/Chrome_OS" title="Chrome OS">
+ Chrome OS
+</a>
+<a href="/wiki/Chromebook" title="Chromebook">
+ Chromebook
+</a>
+<a href="/wiki/Chromebox" title="Chromebox">
+ Chromebox
+</a>
+<a href="/wiki/Chrome_Zone" title="Chrome Zone">
+ Chrome Zone
+</a>
+<a href="/wiki/Google_Cloud_Print" title="Google Cloud Print">
+ Cloud Print
+</a>
+<a href="/wiki/Google_Earth" title="Google Earth">
+ Earth
+</a>
+<a href="/wiki/Google_Sky" title="Google Sky">
+ Sky
+</a>
+<a href="/wiki/Google_Moon" title="Google Moon">
+ Moon
+</a>
+<a href="/wiki/Google_Mars" title="Google Mars">
+ Mars
+</a>
+<a href="/wiki/Google_Gadgets" title="Google Gadgets">
+ Gadgets
+</a>
+<a href="/wiki/Google_Goggles" title="Google Goggles">
+ Goggles
+</a>
+<a href="/wiki/Google_IME" title="Google IME">
+ IME
+</a>
+<a href="/wiki/Google_Pinyin" title="Google Pinyin">
+ Pinyin
+</a>
+<a href="/wiki/Google_Japanese_Input" title="Google Japanese Input">
+ Japanese
+</a>
+<a href="/wiki/Google_Keep" title="Google Keep">
+ Keep
+</a>
+<a href="/wiki/Google_News_%26_Weather" title="Google News &amp; Weather">
+ News &amp; Weather
+</a>
+<a href="/wiki/Google_Now" title="Google Now">
+ Now
+</a>
+<a href="/wiki/Picasa" title="Picasa">
+ Picasa
+</a>
+<a href="/wiki/Google_Play_Games" title="Google Play Games" class="mw-redirect">
+ Play Games
+</a>
+<a href="/wiki/Google_Play_Newsstand" title="Google Play Newsstand" class="mw-redirect">
+ Play Newsstand
+</a>
+<a href="/wiki/OpenRefine" title="OpenRefine">
+ OpenRefine
+</a>
+<a href="/wiki/Google_Toolbar" title="Google Toolbar">
+ Toolbar
+</a>
+<a href="/wiki/Google_Account" title="Google Account">
+ Account
+</a>
+<a href="/wiki/Android_(operating_system)" title="Android (operating system)">
+ Android
+</a>
+<a href="/wiki/Android_version_history" title="Android version history">
+ Version history
+</a>
+<a href="/wiki/Android_software_development" title="Android software development">
+ Software development
+</a>
+<a href="/wiki/Google_App_Engine" title="Google App Engine">
+ App Engine
+</a>
+<a href="/wiki/Google_Apps" title="Google Apps" class="mw-redirect">
+ Apps
+</a>
+<a href="/wiki/Google_Classroom" title="Google Classroom">
+ Classroom
+</a>
+<a href="/wiki/Google_Authenticator" title="Google Authenticator">
+ Authenticator
+</a>
+<a href="/wiki/BigTable" title="BigTable">
+ BigTable
+</a>
+<a href="/wiki/Zygote_Body" title="Zygote Body">
+ Body
+</a>
+<a href="/wiki/Google_Books" title="Google Books">
+ Books
+</a>
+<a href="/wiki/Caja_project" title="Caja project">
+ Caja
+</a>
+<a href="/wiki/Google_Cardboard" title="Google Cardboard">
+ Cardboard
+</a>
+<a href="/wiki/Chromecast" title="Chromecast">
+ Chromecast
+</a>
+<a href="/wiki/Google_Compute_Engine" title="Google Compute Engine">
+ Compute Engine
+</a>
+<a href="/wiki/Google_Contact_Lens" title="Google Contact Lens">
+ Contact Lens
+</a>
+<a href="/wiki/Google_Custom_Search" title="Google Custom Search">
+ Custom Search
+</a>
+<a href="/wiki/Dart_(programming_language)" title="Dart (programming language)">
+ Dart
+</a>
+<a href="/wiki/Google_Earth_Engine" title="Google Earth Engine">
+ Earth Engine
+</a>
+<a href="/wiki/Google_Fit" title="Google Fit">
+ Fit
+</a>
+<a href="/wiki/Google_Glass" title="Google Glass">
+ Glass
+</a>
+<a href="/wiki/Google_File_System" title="Google File System">
+ GFS
+</a>
+<a href="/wiki/Google_Apps_Marketplace" title="Google Apps Marketplace">
+ Marketplace
+</a>
+<a href="/wiki/Google_Native_Client" title="Google Native Client">
+ Native Client
+</a>
+<a href="/wiki/Google_Nexus" title="Google Nexus">
+ Nexus
+</a>
+<a href="/wiki/OpenSocial" title="OpenSocial">
+ OpenSocial
+</a>
+<a href="/wiki/Google_Play" title="Google Play">
+ Play
+</a>
+<a href="/wiki/Google_Public_DNS" title="Google Public DNS">
+ Public DNS
+</a>
+<a href="/wiki/Google_Questions_and_Answers" title="Google Questions and Answers">
+ Q &amp; A
+</a>
+<a href="/wiki/Google_TV" title="Google TV">
+ Google TV
+</a>
+<a href="/wiki/Google_Wallet" title="Google Wallet">
+ Wallet
+</a>
+<a href="/wiki/Google_APIs" title="Google APIs">
+ AJAX APIs
+</a>
+<a href="/wiki/App_Inventor_for_Android" title="App Inventor for Android">
+ App Inventor
+</a>
+<a href="/wiki/AtGoogleTalks" title="AtGoogleTalks">
+ AtGoogleTalks
+</a>
+<a href="/wiki/Google_Closure_Tools" title="Google Closure Tools">
+ Closure Tools
+</a>
+<a href="/wiki/Google_Developers" title="Google Developers">
+ Developers
+</a>
+<a href="/wiki/Google_Gadgets_API" title="Google Gadgets API">
+ Gadgets API
+</a>
+<a href="/wiki/GData" title="GData">
+ GData
+</a>
+<a href="/wiki/Googlebot" title="Googlebot">
+ Googlebot
+</a>
+<a href="/wiki/Google_Guava" title="Google Guava">
+ Guava
+</a>
+<a href="/wiki/Google_Guice" title="Google Guice">
+ Guice
+</a>
+<a href="/wiki/Google_platform#Software" title="Google platform">
+ GWS
+</a>
+<a href="/wiki/Keyhole_Markup_Language" title="Keyhole Markup Language">
+ KML
+</a>
+<a href="/wiki/MapReduce" title="MapReduce">
+ MapReduce
+</a>
+<a href="/wiki/Sitemaps" title="Sitemaps">
+ Sitemaps
+</a>
+<a href="/wiki/Google_Summer_of_Code" title="Google Summer of Code">
+ Summer of Code
+</a>
+<a href="/wiki/Google_Web_Toolkit" title="Google Web Toolkit">
+ Web Toolkit
+</a>
+<a href="/wiki/Google_Webmaster_Tools" title="Google Webmaster Tools">
+ Webmaster Tools
+</a>
+<a href="/wiki/Google_Website_Optimizer" title="Google Website Optimizer">
+ Website Optimizer
+</a>
+<a href="/wiki/Google_Swiffy" title="Google Swiffy">
+ Swiffy
+</a>
+<a href="/wiki/Blogger_(service)" title="Blogger (service)">
+ Blogger
+</a>
+<a href="/wiki/Google_Bookmarks" title="Google Bookmarks">
+ Bookmarks
+</a>
+<a href="/wiki/Google_Docs" title="Google Docs">
+ Docs
+</a>
+<a href="/wiki/Google_Drive" title="Google Drive">
+ Drive
+</a>
+<a href="/wiki/FeedBurner" title="FeedBurner">
+ FeedBurner
+</a>
+<a href="/wiki/Google_Map_Maker" title="Google Map Maker">
+ Map Maker
+</a>
+<a href="/wiki/Panoramio" title="Panoramio">
+ Panoramio
+</a>
+<a href="/wiki/Picasa#Picasa_Web_Albums" title="Picasa">
+ Picasa Web Albums
+</a>
+<a href="/wiki/Google_Sites" title="Google Sites">
+ Sites (JotSpot)
+</a>
+<a href="/wiki/YouTube" title="YouTube">
+ YouTube
+</a>
+<a href="/wiki/Vevo" title="Vevo">
+ Vevo
+</a>
+<a href="/wiki/Zagat" title="Zagat">
+ Zagat
+</a>
+<a href="/wiki/Google_Search_Appliance" title="Google Search Appliance">
+ Appliance
+</a>
+<a href="/wiki/Google_Audio_Indexing" title="Google Audio Indexing">
+ Audio
+</a>
+<a href="/wiki/Google_Blog_Search" title="Google Blog Search">
+ Blog Search
+</a>
+<a href="/wiki/Google_Books" title="Google Books">
+ Books
+</a>
+<a href="/wiki/Google_Books_Library_Project" title="Google Books Library Project">
+ Library Project
+</a>
+<a href="/wiki/Google_eBooks" title="Google eBooks">
+ eBooks
+</a>
+<a href="/wiki/Google_Finance" title="Google Finance">
+ Finance
+</a>
+<a href="/wiki/Google_Images" title="Google Images">
+ Images
+</a>
+<a href="/wiki/Google_Maps" title="Google Maps">
+ Maps
+</a>
+<a href="/wiki/Google_Street_View" title="Google Street View">
+ Street View
+</a>
+<a href="/wiki/Timeline_of_Google_Street_View" title="Timeline of Google Street View">
+ Timeline
+</a>
+<a href="/wiki/Google_Street_View_privacy_concerns" title="Google Street View privacy concerns">
+ Privacy concerns
+</a>
+<a href="/wiki/Competition_of_Google_Street_View" title="Competition of Google Street View" class="mw-redirect">
+ Competition
+</a>
+<a href="/wiki/Locations_of_Google_Street_View" title="Locations of Google Street View" class="mw-redirect">
+ Locations
+</a>
+<a href="/wiki/Google_News" title="Google News">
+ News
+</a>
+<a href="/wiki/Google_News_Archive" title="Google News Archive">
+ Archive
+</a>
+<a href="/wiki/Google_Patents" title="Google Patents">
+ Patents
+</a>
+<a href="/wiki/Google_Scholar" title="Google Scholar">
+ Scholar
+</a>
+<a href="/wiki/Google_Shopping" title="Google Shopping">
+ Shopping
+</a>
+<a href="/wiki/Google_Groups" title="Google Groups">
+ Usenet
+</a>
+<a href="/wiki/Google_Voice_Search" title="Google Voice Search">
+ Voice Search
+</a>
+<a href="/wiki/Google_Search" title="Google Search">
+ Web Search
+</a>
+<a href="/wiki/Google_Web_History" title="Google Web History">
+ History
+</a>
+<a href="/wiki/Google_Personalized_Search" title="Google Personalized Search">
+ Personalized
+</a>
+<a href="/wiki/Google_Real-Time_Search" title="Google Real-Time Search">
+ Real-Time
+</a>
+<a href="/wiki/Google_Search#Instant_Search" title="Google Search">
+ Instant Search
+</a>
+<a href="/wiki/SafeSearch" title="SafeSearch">
+ SafeSearch
+</a>
+<a href="/wiki/PageRank" title="PageRank">
+ PageRank
+</a>
+<a href="/wiki/Google_Panda" title="Google Panda">
+ Panda
+</a>
+<a href="/wiki/Google_Penguin" title="Google Penguin">
+ Penguin
+</a>
+<a href="/wiki/Google_Hummingbird" title="Google Hummingbird">
+ Hummingbird
+</a>
+<a href="/wiki/Google_Insights_for_Search" title="Google Insights for Search">
+ Insights for Search
+</a>
+<a href="/wiki/Google_Trends" title="Google Trends">
+ Trends
+</a>
+<a href="/wiki/Knowledge_Graph" title="Knowledge Graph">
+ Knowledge Graph
+</a>
+<a href="/wiki/Aardvark_(search_engine)" title="Aardvark (search engine)">
+ Aardvark
+</a>
+<a href="/wiki/Google_Answers" title="Google Answers">
+ Answers
+</a>
+<a href="/wiki/Google_Browser_Sync" title="Google Browser Sync">
+ Browser Sync
+</a>
+<a href="/wiki/Google_Base" title="Google Base">
+ Base
+</a>
+<a href="/wiki/Google_Buzz" title="Google Buzz">
+ Buzz
+</a>
+<a href="/wiki/Google_Checkout" title="Google Checkout">
+ Checkout
+</a>
+<a href="/wiki/Google_Chrome_Frame" title="Google Chrome Frame">
+ Chrome Frame
+</a>
+<a href="/wiki/AdWords#Google_Click-to-Call" title="AdWords">
+ Click-to-Call
+</a>
+<a href="/wiki/Google_Cloud_Connect" title="Google Cloud Connect">
+ Cloud Connect
+</a>
+<a href="/wiki/Google_Code_Search" title="Google Code Search">
+ Code Search
+</a>
+<a href="/wiki/Google_Currents" title="Google Currents">
+ Currents
+</a>
+<a href="/wiki/Google_Desktop" title="Google Desktop">
+ Desktop
+</a>
+<a href="/wiki/Google_Dictionary" title="Google Dictionary">
+ Dictionary
+</a>
+<a href="/wiki/Dodgeball_(service)" title="Dodgeball (service)">
+ Dodgeball
+</a>
+<a href="/wiki/Google_Fast_Flip" title="Google Fast Flip">
+ Fast Flip
+</a>
+<a href="/wiki/Gears_(software)" title="Gears (software)">
+ Gears
+</a>
+<a href="/wiki/GOOG-411" title="GOOG-411">
+ GOOG-411
+</a>
+<a href="/wiki/Jaiku" title="Jaiku">
+ Jaiku
+</a>
+<a href="/wiki/Knol" title="Knol">
+ Knol
+</a>
+<a href="/wiki/Google_Health" title="Google Health">
+ Health
+</a>
+<a href="/wiki/IGoogle" title="IGoogle">
+ iGoogle
+</a>
+<a href="/wiki/Google_Image_Labeler" title="Google Image Labeler">
+ Image Labeler
+</a>
+<a href="/wiki/Google_Labs" title="Google Labs">
+ Labs
+</a>
+<a href="/wiki/Google_Latitude" title="Google Latitude">
+ Latitude
+</a>
+<a href="/wiki/Google_Lively" title="Google Lively">
+ Lively
+</a>
+<a href="/wiki/Google_Mashup_Editor" title="Google Mashup Editor">
+ Mashup Editor
+</a>
+<a href="/wiki/Google_Notebook" title="Google Notebook">
+ Notebook
+</a>
+<a href="/wiki/Google_Pack" title="Google Pack">
+ Pack
+</a>
+<a href="/wiki/Google_Page_Creator" title="Google Page Creator">
+ Page Creator
+</a>
+<a href="/wiki/Picnik" title="Picnik">
+ Picnik
+</a>
+<a href="/wiki/Google_PowerMeter" title="Google PowerMeter">
+ PowerMeter
+</a>
+<a href="/wiki/Google_Reader" title="Google Reader">
+ Reader
+</a>
+<a href="/wiki/Google_Script_Converter" title="Google Script Converter">
+ Script Converter
+</a>
+<a href="/wiki/Google_SearchWiki" title="Google SearchWiki">
+ SearchWiki
+</a>
+<a href="/wiki/Google_Sidewiki" title="Google Sidewiki">
+ Sidewiki
+</a>
+<a href="/wiki/Slide.com" title="Slide.com">
+ Slide
+</a>
+<a href="/wiki/Google_Squared" title="Google Squared">
+ Squared
+</a>
+<a href="/wiki/Google_Pack#Google_Updater" title="Google Pack">
+ Updater
+</a>
+<a href="/wiki/Urchin_(software)" title="Urchin (software)">
+ Urchin
+</a>
+<a href="/wiki/Google_Videos" title="Google Videos">
+ Videos
+</a>
+<a href="/wiki/Google_Video_Marketplace" title="Google Video Marketplace">
+ Video Marketplace
+</a>
+<a href="/wiki/Apache_Wave" title="Apache Wave">
+ Wave
+</a>
+<a href="/wiki/Google_Web_Accelerator" title="Google Web Accelerator">
+ Web Accelerator
+</a>
+<a href="/wiki/Orkut" title="Orkut">
+ Orkut
+</a>
+<a href="/wiki/111_Eighth_Avenue" title="111 Eighth Avenue">
+ 111 Eighth Avenue
+</a>
+<a href="/wiki/AI_Challenge" title="AI Challenge">
+ AI Challenge
+</a>
+<a href="/wiki/Google_Art_Project" title="Google Art Project">
+ Art Project
+</a>
+<a href="/wiki/Google_bomb" title="Google bomb">
+ Bomb
+</a>
+<a href="/wiki/Calico_(company)" title="Calico (company)">
+ Calico (company)
+</a>
+<a href="/wiki/Google_Current" title="Google Current">
+ Current
+</a>
+<a href="/wiki/Google_Chrome_Experiments" title="Google Chrome Experiments">
+ Chrome Experiments
+</a>
+<a href="/wiki/Google_Code_Jam" title="Google Code Jam">
+ Code Jam
+</a>
+<a href="/wiki/Google_Developer_Day" title="Google Developer Day">
+ Developer Day
+</a>
+<a href="/wiki/Google_Business_Groups" title="Google Business Groups">
+ Google Business Groups
+</a>
+<a href="/wiki/Google_Data_Liberation_Front" title="Google Data Liberation Front">
+ Data Liberation
+</a>
+<a href="/wiki/Google_Takeout" title="Google Takeout">
+ Takeout
+</a>
+<a href="/wiki/Google_Developer_Expert" title="Google Developer Expert">
+ Google Developer Expert
+</a>
+<a href="/wiki/Google_Enterprise" title="Google Enterprise">
+ Google Enterprise
+</a>
+<a href="/wiki/Google_driverless_car" title="Google driverless car">
+ Driverless car
+</a>
+<a href="/wiki/Google_Fiber" title="Google Fiber">
+ Fiber
+</a>
+<a href="/wiki/Google.org#Google_Foundation" title="Google.org">
+ Foundation
+</a>
+<a href="/wiki/Google_China" title="Google China">
+ Google China
+</a>
+<a href="/wiki/Google_Shopping_Express" title="Google Shopping Express">
+ Google Shopping Express
+</a>
+<a href="/wiki/Googlization" title="Googlization">
+ Googlization
+</a>
+<a href="/wiki/Google_Grants" title="Google Grants">
+ Grants
+</a>
+<a href="/wiki/Google.org" title="Google.org">
+ Google.org
+</a>
+<a href="/wiki/Googleplex" title="Googleplex">
+ Googleplex
+</a>
+<a href="/wiki/Goojje" title="Goojje">
+ Goojje
+</a>
+<a href="/wiki/Google_Search#.22I.27m_Feeling_Lucky.22" title="Google Search">
+ I&#39;m Feeling Lucky
+</a>
+<a href="/wiki/Google_I/O" title="Google I/O">
+ I/O
+</a>
+<a href="/wiki/Google_logo" title="Google logo">
+ Logo
+</a>
+<a href="/wiki/Google_Doodle" title="Google Doodle">
+ Google Doodles
+</a>
+<a href="/wiki/List_of_Google_Doodles_(1998%E2%80%932009)" title="List of Google Doodles (1998–2009)">
+ 1998–2009
+</a>
+<a href="/wiki/List_of_Google_Doodles_in_2010" title="List of Google Doodles in 2010">
+ 2010
+</a>
+<a href="/wiki/List_of_Google_Doodles_in_2011" title="List of Google Doodles in 2011">
+ 2011
+</a>
+<a href="/wiki/List_of_Google_Doodles_in_2012" title="List of Google Doodles in 2012">
+ 2012
+</a>
+<a href="/wiki/List_of_Google_Doodles_in_2013" title="List of Google Doodles in 2013">
+ 2013
+</a>
+<a href="/wiki/List_of_Google_Doodles_in_2014" title="List of Google Doodles in 2014">
+ 2014
+</a>
+<a href="/wiki/Google_Lunar_X_Prize" title="Google Lunar X Prize">
+ Lunar X Prize
+</a>
+<a href="/wiki/Material_Design" title="Material Design" class="mw-redirect">
+ Material Design
+</a>
+<a href="/wiki/Monopoly_City_Streets" title="Monopoly City Streets">
+ Monopoly City Streets
+</a>
+<a href="/wiki/Motorola_Mobility" title="Motorola Mobility">
+ Motorola Mobility
+</a>
+<a href="/wiki/Google_Science_Fair" title="Google Science Fair">
+ Science Fair
+</a>
+<a href="/wiki/Google_Searchology" title="Google Searchology">
+ Searchology
+</a>
+<a href="/wiki/Unity_(cable_system)" title="Unity (cable system)">
+ Unity
+</a>
+<a href="/wiki/Google_Ventures" title="Google Ventures">
+ Ventures
+</a>
+<a href="/wiki/Google_WiFi" title="Google WiFi">
+ WiFi
+</a>
+<a href="/wiki/Google_X" title="Google X">
+ X
+</a>
+<a href="/wiki/Project_Ara" title="Project Ara">
+ Ara
+</a>
+<a href="/wiki/Project_Loon" title="Project Loon">
+ Loon
+</a>
+<a href="/wiki/Project_Tango" title="Project Tango">
+ Tango
+</a>
+<a href="/wiki/Larry_Page" title="Larry Page">
+ Larry Page
+</a>
+<a href="/wiki/Eric_Schmidt" title="Eric Schmidt">
+ Eric Schmidt
+</a>
+<a href="/wiki/Sergey_Brin" title="Sergey Brin">
+ Sergey Brin
+</a>
+<a href="/wiki/John_Doerr" title="John Doerr">
+ John Doerr
+</a>
+<a href="/wiki/John_L._Hennessy" title="John L. Hennessy">
+ John L. Hennessy
+</a>
+<a href="/wiki/Ray_Kurzweil" title="Ray Kurzweil">
+ Raymond Kurzweil
+</a>
+<a href="/wiki/Ann_Mather" title="Ann Mather">
+ Ann Mather
+</a>
+<a href="/wiki/Paul_Otellini" title="Paul Otellini">
+ Paul Otellini
+</a>
+<a href="/wiki/Ram_Shriram" title="Ram Shriram">
+ Ram Shriram
+</a>
+<a href="/wiki/Shirley_M._Tilghman" title="Shirley M. Tilghman">
+ Shirley M. Tilghman
+</a>
+<a href="/wiki/Matt_Cutts" title="Matt Cutts">
+ Matt Cutts
+</a>
+<a href="/wiki/Al_Gore" title="Al Gore">
+ Al Gore
+</a>
+<a href="/wiki/Rajen_Sheth" title="Rajen Sheth">
+ Rajen Sheth
+</a>
+<a href="/wiki/Vint_Cerf" title="Vint Cerf">
+ Vint Cerf
+</a>
+<a href="/wiki/Alan_Mulally" title="Alan Mulally">
+ Alan Mulally
+</a>
+<a href="/wiki/Wikipedia:WikiProject_Google" title="Wikipedia:WikiProject Google">
+ Project
+</a>
+<a href="/wiki/Category:Google" title="Category:Google">
+ Category
+</a>
+<a href="//commons.wikimedia.org/wiki/Google" class="extiw" title="commons:Google">
+ Commons
+</a>
+<a href="//en.wikiversity.org/wiki/Google" class="extiw" title="v:Google">
+ Wikiversity
+</a>
+<a href="/wiki/Template:Rob_Pike_navbox" title="Template:Rob Pike navbox">
+ <span title="View this template" style=";;background:none transparent;border:none;;">
+  v
+ </span>
+</a>
+<a href="/wiki/Template_talk:Rob_Pike_navbox" title="Template talk:Rob Pike navbox">
+ <span title="Discuss this template" style=";;background:none transparent;border:none;;">
+  t
+ </span>
+</a>
+<a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Rob_Pike_navbox&amp;action=edit">
+ <span title="Edit this template" style=";;background:none transparent;border:none;;">
+  e
+ </span>
+</a>
+<a href="/wiki/Plan_9_from_Bell_Labs" title="Plan 9 from Bell Labs">
+ Plan 9 from Bell Labs
+</a>
+<a href="/wiki/Inferno_(operating_system)" title="Inferno (operating system)">
+ Inferno
+</a>
+<a href="/wiki/Newsqueak" title="Newsqueak">
+ Newsqueak
+</a>
+<a href="/wiki/Limbo_(programming_language)" title="Limbo (programming language)">
+ Limbo
+</a>
+<a href="/wiki/Sawzall_(programming_language)" title="Sawzall (programming language)">
+ Sawzall
+</a>
+<a href="/wiki/Acme_(text_editor)" title="Acme (text editor)">
+ acme
+</a>
+<a href="/wiki/Blit_(computer_terminal)" title="Blit (computer terminal)">
+ Blit
+</a>
+<a href="/wiki/Sam_(text_editor)" title="Sam (text editor)">
+ sam
+</a>
+<a href="/wiki/Rio_(windowing_system)" title="Rio (windowing system)">
+ rio
+</a>
+<a href="/wiki/8%C2%BD_(Plan_9)" title="8½ (Plan 9)">
+ 8½
+</a>
+<a href="/wiki/The_Practice_of_Programming" title="The Practice of Programming">
+ The Practice of Programming
+</a>
+<a href="/wiki/The_Unix_Programming_Environment" title="The Unix Programming Environment">
+ The Unix Programming Environment
+</a>
+<a href="/wiki/Ren%C3%A9e_French" title="Renée French">
+ Renée French
+</a>
+<a href="/wiki/Mark_V_Shaney" title="Mark V Shaney">
+ Mark V Shaney
+</a>
+<a href="/wiki/UTF-8" title="UTF-8">
+ UTF-8
+</a>
+<a href="/wiki/Template:Ken_Thompson_navbox" title="Template:Ken Thompson navbox">
+ <span title="View this template" style=";;background:none transparent;border:none;;">
+  v
+ </span>
+</a>
+<a href="/wiki/Template_talk:Ken_Thompson_navbox" title="Template talk:Ken Thompson navbox">
+ <span title="Discuss this template" style=";;background:none transparent;border:none;;">
+  t
+ </span>
+</a>
+<a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Ken_Thompson_navbox&amp;action=edit">
+ <span title="Edit this template" style=";;background:none transparent;border:none;;">
+  e
+ </span>
+</a>
+<a href="/wiki/Unix" title="Unix">
+ Unix
+</a>
+<a href="/wiki/Plan_9_from_Bell_Labs" title="Plan 9 from Bell Labs">
+ Plan 9 from Bell Labs
+</a>
+<a href="/wiki/B_(programming_language)" title="B (programming language)">
+ B
+</a>
+<a href="/wiki/Bon_(programming_language)" title="Bon (programming language)">
+ Bon
+</a>
+<a href="/wiki/Belle_(chess_machine)" title="Belle (chess machine)">
+ Belle
+</a>
+<a href="/wiki/Ed_(text_editor)" title="Ed (text editor)">
+ ed
+</a>
+<a href="/wiki/Sam_(text_editor)" title="Sam (text editor)">
+ sam
+</a>
+<a href="/wiki/Space_Travel_(video_game)" title="Space Travel (video game)">
+ Space Travel
+</a>
+<a href="/wiki/UTF-8" title="UTF-8">
+ UTF-8
+</a>
+<a href="/wiki/Category:C_programming_language_family" title="Category:C programming language family">
+ C programming language family
+</a>
+<a href="/wiki/Category:Concurrent_programming_languages" title="Category:Concurrent programming languages">
+ Concurrent programming languages
+</a>
+<a href="/wiki/Category:Google_software" title="Category:Google software">
+ Google software
+</a>
+<a href="/wiki/Category:Procedural_programming_languages" title="Category:Procedural programming languages">
+ Procedural programming languages
+</a>
+<a href="/wiki/Category:Cross-platform_software" title="Category:Cross-platform software">
+ Cross-platform software
+</a>
+<a href="/wiki/Category:Programming_languages_created_in_2009" title="Category:Programming languages created in 2009">
+ Programming languages created in 2009
+</a>
+<a href="/wiki/Category:American_inventions" title="Category:American inventions">
+ American inventions
+</a>
+<a href="/wiki/Category:Software_using_the_BSD_license" title="Category:Software using the BSD license">
+ Software using the BSD license
+</a>
+<a href="/wiki/Category:Free_compilers_and_interpreters" title="Category:Free compilers and interpreters">
+ Free compilers and interpreters
+</a>
+<a href="/wiki/Category:Pages_with_citations_lacking_titles" title="Category:Pages with citations lacking titles">
+ Pages with citations lacking titles
+</a>
+<a href="/wiki/Category:Pages_with_citations_having_bare_URLs" title="Category:Pages with citations having bare URLs">
+ Pages with citations having bare URLs
+</a>
+<a href="/wiki/Category:CS1_errors:_missing_author_or_editor" title="Category:CS1 errors: missing author or editor">
+ CS1 errors: missing author or editor
+</a>
+<a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">
+ All articles with unsourced statements
+</a>
+<a href="/wiki/Category:Articles_with_unsourced_statements_from_July_2014" title="Category:Articles with unsourced statements from July 2014">
+ Articles with unsourced statements from July 2014
+</a>
+<a href="/wiki/Category:Articles_containing_potentially_dated_statements_from_August_2014" title="Category:Articles containing potentially dated statements from August 2014">
+ Articles containing potentially dated statements from August 2014
+</a>
+<a href="/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">
+ All articles containing potentially dated statements
+</a>
+<a href="/wiki/Category:Articles_prone_to_spam_from_June_2013" title="Category:Articles prone to spam from June 2013">
+ Articles prone to spam from June 2013
+</a>
+<a href="/wiki/Category:Use_dmy_dates_from_August_2011" title="Category:Use dmy dates from August 2011">
+ Use dmy dates from August 2011
+</a>
+<a href="/w/index.php?title=Special:UserLogin&amp;returnto=Go+%28programming+language%29&amp;type=signup" title="You are encouraged to create an account and log in; however, it is not mandatory">
+ Create account
+</a>
+<a href="/w/index.php?title=Special:UserLogin&amp;returnto=Go+%28programming+language%29" title="You&#39;re encouraged to log in; however, it&#39;s not mandatory. [o]" accesskey="o">
+ Log in
+</a>
+<a href="/wiki/Go_(programming_language)" title="View the content page [c]" accesskey="c">
+ Article
+</a>
+<a href="/wiki/Talk:Go_(programming_language)" title="Discussion about the content page [t]" accesskey="t">
+ Talk
+</a>
+<a href="/wiki/Go_(programming_language)">
+ Read
+</a>
+<a href="/w/index.php?title=Go_(programming_language)&amp;action=edit" title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">
+ Edit
+</a>
+<a href="/w/index.php?title=Go_(programming_language)&amp;action=history" title="Past versions of this page [h]" accesskey="h">
+ View history
+</a>
+<a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">
+ Main page
+</a>
+<a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">
+ Contents
+</a>
+<a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">
+ Featured content
+</a>
+<a href="/wiki/Portal:Current_events" title="Find background information on current events">
+ Current events
+</a>
+<a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">
+ Random article
+</a>
+<a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">
+ Donate to Wikipedia
+</a>
+<a href="//shop.wikimedia.org" title="Visit the Wikimedia Shop">
+ Wikimedia Shop
+</a>
+<a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">
+ Help
+</a>
+<a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">
+ About Wikipedia
+</a>
+<a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">
+ Community portal
+</a>
+<a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">
+ Recent changes
+</a>
+<a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">
+ Contact page
+</a>
+<a href="/wiki/Special:WhatLinksHere/Go_(programming_language)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">
+ What links here
+</a>
+<a href="/wiki/Special:RecentChangesLinked/Go_(programming_language)" title="Recent changes in pages linked from this page [k]" accesskey="k">
+ Related changes
+</a>
+<a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">
+ Upload file
+</a>
+<a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">
+ Special pages
+</a>
+<a href="/w/index.php?title=Go_(programming_language)&amp;oldid=632918619" title="Permanent link to this revision of the page">
+ Permanent link
+</a>
+<a href="/w/index.php?title=Go_(programming_language)&amp;action=info" title="More information about this page">
+ Page information
+</a>
+<a href="//www.wikidata.org/wiki/Q37227" title="Link to connected data repository item [g]" accesskey="g">
+ Wikidata item
+</a>
+<a href="/w/index.php?title=Special:CiteThisPage&amp;page=Go_%28programming_language%29&amp;id=632918619" title="Information on how to cite this page">
+ Cite this page
+</a>
+<a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Go+%28programming+language%29">
+ Create a book
+</a>
+<a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Go+%28programming+language%29&amp;oldid=632918619&amp;writer=rdf2latex">
+ Download as PDF
+</a>
+<a href="/w/index.php?title=Go_(programming_language)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">
+ Printable version
+</a>
+<a href="//ar.wikipedia.org/wiki/%D8%BA%D9%88_(%D9%84%D8%BA%D8%A9_%D8%A8%D8%B1%D9%85%D8%AC%D8%A9)" title="غو (لغة برمجة) – Arabic" lang="ar" hreflang="ar">
+ العربية
+</a>
+<a href="//bg.wikipedia.org/wiki/Go_(%D0%B5%D0%B7%D0%B8%D0%BA_%D0%B7%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8%D1%80%D0%B0%D0%BD%D0%B5)" title="Go (език за програмиране) – Bulgarian" lang="bg" hreflang="bg">
+ Български
+</a>
+<a href="//cs.wikipedia.org/wiki/Go_(programovac%C3%AD_jazyk)" title="Go (programovací jazyk) – Czech" lang="cs" hreflang="cs">
+ Čeština
+</a>
+<a href="//da.wikipedia.org/wiki/Go_(programmeringssprog)" title="Go (programmeringssprog) – Danish" lang="da" hreflang="da">
+ Dansk
+</a>
+<a href="//de.wikipedia.org/wiki/Go_(Programmiersprache)" title="Go (Programmiersprache) – German" lang="de" hreflang="de">
+ Deutsch
+</a>
+<a href="//es.wikipedia.org/wiki/Go_(lenguaje_de_programaci%C3%B3n)" title="Go (lenguaje de programación) – Spanish" lang="es" hreflang="es">
+ Español
+</a>
+<a href="//fa.wikipedia.org/wiki/%DA%AF%D9%88_(%D8%B2%D8%A8%D8%A7%D9%86_%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C)" title="گو (زبان برنامه‌نویسی) – Persian" lang="fa" hreflang="fa">
+ فارسی
+</a>
+<a href="//fr.wikipedia.org/wiki/Go_(langage)" title="Go (langage) – French" lang="fr" hreflang="fr">
+ Français
+</a>
+<a href="//gu.wikipedia.org/wiki/%E0%AA%97%E0%AB%8B_(%E0%AA%AA%E0%AB%8D%E0%AA%B0%E0%AB%8B%E0%AA%97%E0%AB%8D%E0%AA%B0%E0%AA%BE%E0%AA%AE%E0%AA%BF%E0%AA%82%E0%AA%97_%E0%AA%AD%E0%AA%BE%E0%AA%B7%E0%AA%BE)" title="ગો (પ્રોગ્રામિંગ ભાષા) – Gujarati" lang="gu" hreflang="gu">
+ ગુજરાતી
+</a>
+<a href="//ko.wikipedia.org/wiki/Go_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)" title="Go (프로그래밍 언어) – Korean" lang="ko" hreflang="ko">
+ 한국어
+</a>
+<a href="//is.wikipedia.org/wiki/Go_(forritunarm%C3%A1l)" title="Go (forritunarmál) – Icelandic" lang="is" hreflang="is">
+ Íslenska
+</a>
+<a href="//it.wikipedia.org/wiki/Go_(linguaggio_di_programmazione)" title="Go (linguaggio di programmazione) – Italian" lang="it" hreflang="it">
+ Italiano
+</a>
+<a href="//he.wikipedia.org/wiki/Go_(%D7%A9%D7%A4%D7%AA_%D7%AA%D7%9B%D7%A0%D7%95%D7%AA)" title="Go (שפת תכנות) – Hebrew" lang="he" hreflang="he">
+ עברית
+</a>
+<a href="//hu.wikipedia.org/wiki/Go_(programoz%C3%A1si_nyelv)" title="Go (programozási nyelv) – Hungarian" lang="hu" hreflang="hu">
+ Magyar
+</a>
+<a href="//ms.wikipedia.org/wiki/Go_(bahasa_pengaturcaraan)" title="Go (bahasa pengaturcaraan) – Malay" lang="ms" hreflang="ms">
+ Bahasa Melayu
+</a>
+<a href="//nl.wikipedia.org/wiki/Go_(programmeertaal)" title="Go (programmeertaal) – Dutch" lang="nl" hreflang="nl">
+ Nederlands
+</a>
+<a href="//ja.wikipedia.org/wiki/Go_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Go (プログラミング言語) – Japanese" lang="ja" hreflang="ja">
+ 日本語
+</a>
+<a href="//no.wikipedia.org/wiki/Go_(programmeringsspr%C3%A5k)" title="Go (programmeringsspråk) – Norwegian (bokmål)" lang="no" hreflang="no">
+ Norsk bokmål
+</a>
+<a href="//pl.wikipedia.org/wiki/Go_(j%C4%99zyk_programowania)" title="Go (język programowania) – Polish" lang="pl" hreflang="pl">
+ Polski
+</a>
+<a href="//pt.wikipedia.org/wiki/Go_(linguagem_de_programa%C3%A7%C3%A3o)" title="Go (linguagem de programação) – Portuguese" lang="pt" hreflang="pt">
+ Português
+</a>
+<a href="//ru.wikipedia.org/wiki/Go" title="Go – Russian" lang="ru" hreflang="ru">
+ Русский
+</a>
+<a href="//sr.wikipedia.org/wiki/%D0%93%D0%BE%D1%83" title="Гоу – Serbian" lang="sr" hreflang="sr">
+ Српски / srpski
+</a>
+<a href="//fi.wikipedia.org/wiki/Go_(ohjelmointikieli)" title="Go (ohjelmointikieli) – Finnish" lang="fi" hreflang="fi">
+ Suomi
+</a>
+<a href="//sv.wikipedia.org/wiki/Go_(programspr%C3%A5k)" title="Go (programspråk) – Swedish" lang="sv" hreflang="sv">
+ Svenska
+</a>
+<a href="//ta.wikipedia.org/wiki/%E0%AE%95%E0%AF%8B_(%E0%AE%A8%E0%AE%BF%E0%AE%B0%E0%AE%B2%E0%AE%BE%E0%AE%95%E0%AF%8D%E0%AE%95_%E0%AE%AE%E0%AF%8A%E0%AE%B4%E0%AE%BF)" title="கோ (நிரலாக்க மொழி) – Tamil" lang="ta" hreflang="ta">
+ தமிழ்
+</a>
+<a href="//tr.wikipedia.org/wiki/Go_(programlama_dili)" title="Go (programlama dili) – Turkish" lang="tr" hreflang="tr">
+ Türkçe
+</a>
+<a href="//uk.wikipedia.org/wiki/Go_(%D0%BC%D0%BE%D0%B2%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F)" title="Go (мова програмування) – Ukrainian" lang="uk" hreflang="uk">
+ Українська
+</a>
+<a href="//vi.wikipedia.org/wiki/Go_(ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh)" title="Go (ngôn ngữ lập trình) – Vietnamese" lang="vi" hreflang="vi">
+ Tiếng Việt
+</a>
+<a href="//zh.wikipedia.org/wiki/Go" title="Go – Chinese" lang="zh" hreflang="zh">
+ 中文
+</a>
+<a href="#">
+</a>
+<a href="//wikimediafoundation.org/wiki/Terms_of_Use">
+ Terms of Use
+</a>
+<a href="//wikimediafoundation.org/wiki/Privacy_policy">
+ Privacy Policy
+</a>
+<a href="//www.wikimediafoundation.org/">
+ Wikimedia Foundation, Inc.
+</a>
+<a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">
+ Privacy policy
+</a>
+<a href="/wiki/Wikipedia:About" title="Wikipedia:About">
+ About Wikipedia
+</a>
+<a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">
+ Disclaimers
+</a>
+<a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">
+ Contact Wikipedia
+</a>
+<a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">
+ Developers
+</a>
+<a href="//en.m.wikipedia.org/w/index.php?title=Go_(programming_language)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">
+ Mobile view
+</a>
+<a href="//wikimediafoundation.org/">
+ <img src="//bits.wikimedia.org/images/wikimedia-button.png" srcset="//bits.wikimedia.org/images/wikimedia-button-1.5x.png 1.5x, //bits.wikimedia.org/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation">
+</a>
+<a href="//www.mediawiki.org/">
+ <img src="//bits.wikimedia.org/static-1.25wmf6/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31">
+</a>

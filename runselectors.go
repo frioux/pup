@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"os"
+	"io"
 
 	"golang.org/x/net/html"
 )
 
-func runSelectors(cmds []string, root *html.Node) error {
+func runSelectors(w io.Writer,  cmds []string, root *html.Node) error {
 	// Parse the selectors
 	selectorFuncs := []SelectorFunc{}
 	funcGenerator := Select
@@ -49,7 +49,7 @@ func runSelectors(cmds []string, root *html.Node) error {
 		}
 	}
 	selectedNodes = append(selectedNodes, currNodes...)
-	pupDisplayer.Display(os.Stdout, selectedNodes)
+	pupDisplayer.Display(w, selectedNodes)
 
 	return nil
 }
