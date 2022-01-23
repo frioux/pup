@@ -1,0 +1,258 @@
+<ul>
+ <li class="toclevel-1 tocsection-1">
+  <a href="#History">
+   <span class="tocnumber">
+    1
+   </span>
+   <span class="toctext">
+    History
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-2">
+  <a href="#Language_design">
+   <span class="tocnumber">
+    2
+   </span>
+   <span class="toctext">
+    Language design
+   </span>
+  </a>
+  <ul>
+   <li class="toclevel-2 tocsection-3">
+    <a href="#Syntax">
+     <span class="tocnumber">
+      2.1
+     </span>
+     <span class="toctext">
+      Syntax
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-2 tocsection-4">
+    <a href="#Types">
+     <span class="tocnumber">
+      2.2
+     </span>
+     <span class="toctext">
+      Types
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-2 tocsection-5">
+    <a href="#Package_system">
+     <span class="tocnumber">
+      2.3
+     </span>
+     <span class="toctext">
+      Package system
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-2 tocsection-6">
+    <a href="#Concurrency:_goroutines.2C_channels.2C_and_select">
+     <span class="tocnumber">
+      2.4
+     </span>
+     <span class="toctext">
+      Concurrency: goroutines, channels, and select
+     </span>
+    </a>
+    <ul>
+     <li class="toclevel-3 tocsection-7">
+      <a href="#Race_condition_safety">
+       <span class="tocnumber">
+        2.4.1
+       </span>
+       <span class="toctext">
+        Race condition safety
+       </span>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toclevel-2 tocsection-8">
+    <a href="#Interface_system">
+     <span class="tocnumber">
+      2.5
+     </span>
+     <span class="toctext">
+      Interface system
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-2 tocsection-9">
+    <a href="#Omissions">
+     <span class="tocnumber">
+      2.6
+     </span>
+     <span class="toctext">
+      Omissions
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toclevel-1 tocsection-10">
+  <a href="#Conventions_and_code_style">
+   <span class="tocnumber">
+    3
+   </span>
+   <span class="toctext">
+    Conventions and code style
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-11">
+  <a href="#Language_tools">
+   <span class="tocnumber">
+    4
+   </span>
+   <span class="toctext">
+    Language tools
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-12">
+  <a href="#Examples">
+   <span class="tocnumber">
+    5
+   </span>
+   <span class="toctext">
+    Examples
+   </span>
+  </a>
+  <ul>
+   <li class="toclevel-2 tocsection-13">
+    <a href="#Hello_world">
+     <span class="tocnumber">
+      5.1
+     </span>
+     <span class="toctext">
+      Hello world
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-2 tocsection-14">
+    <a href="#Echo">
+     <span class="tocnumber">
+      5.2
+     </span>
+     <span class="toctext">
+      Echo
+     </span>
+    </a>
+   </li>
+   <li class="toclevel-2 tocsection-15">
+    <a href="#File_Read">
+     <span class="tocnumber">
+      5.3
+     </span>
+     <span class="toctext">
+      File Read
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toclevel-1 tocsection-16">
+  <a href="#Notable_users">
+   <span class="tocnumber">
+    6
+   </span>
+   <span class="toctext">
+    Notable users
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-17">
+  <a href="#Libraries">
+   <span class="tocnumber">
+    7
+   </span>
+   <span class="toctext">
+    Libraries
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-18">
+  <a href="#Community_and_conferences">
+   <span class="tocnumber">
+    8
+   </span>
+   <span class="toctext">
+    Community and conferences
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-19">
+  <a href="#Reception">
+   <span class="tocnumber">
+    9
+   </span>
+   <span class="toctext">
+    Reception
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-20">
+  <a href="#Mascot">
+   <span class="tocnumber">
+    10
+   </span>
+   <span class="toctext">
+    Mascot
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-21">
+  <a href="#Naming_dispute">
+   <span class="tocnumber">
+    11
+   </span>
+   <span class="toctext">
+    Naming dispute
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-22">
+  <a href="#See_also">
+   <span class="tocnumber">
+    12
+   </span>
+   <span class="toctext">
+    See also
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-23">
+  <a href="#Notes">
+   <span class="tocnumber">
+    13
+   </span>
+   <span class="toctext">
+    Notes
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-24">
+  <a href="#References">
+   <span class="tocnumber">
+    14
+   </span>
+   <span class="toctext">
+    References
+   </span>
+  </a>
+ </li>
+ <li class="toclevel-1 tocsection-25">
+  <a href="#External_links">
+   <span class="tocnumber">
+    15
+   </span>
+   <span class="toctext">
+    External links
+   </span>
+  </a>
+ </li>
+</ul>
