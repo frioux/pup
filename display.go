@@ -68,7 +68,7 @@ func (t TreeDisplayer) Display(w io.Writer, nodes []*html.Node) {
 }
 
 // The <pre> tag indicates that the text within it should always be formatted
-// as is. See https://github.com/frioux/pup/issues/33
+// as is. See https://github.com/ericchiang/pup/issues/33
 func (t TreeDisplayer) printPre(w io.Writer, n *html.Node) {
 	switch n.Type {
 	case html.TextNode:
